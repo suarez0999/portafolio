@@ -1,11 +1,23 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Popover from "../components/Popover.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Welcome />
+  <Popover position="bottom">
+    <div slot="buttonContent">
+      <button
+        class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      >
+        ¡Haz clic aquí!
+      </button>
+    </div>
+    <div slot="title">¡Hola!</div>
+    <div slot="content">
+      <p>¡Bienvenido a Astro! 🚀</p>
+    </div>
+  </Popover>
+  
 </Layout>
