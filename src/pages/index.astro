@@ -1,23 +1,37 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-import Popover from "../components/Popover.astro";
+import SectionTitle from "../components/ui/SectionTitle.astro";
+import SectionContainer from "../components/ui/SectionContainer.astro";
+import Home from "../components/Home.astro";
 ---
 
 <Layout>
-  <Welcome />
-  <Popover position="bottom">
-    <div slot="buttonContent">
-      <button
-        class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-      >
-        ¡Haz clic aquí!
-      </button>
-    </div>
-    <div slot="title">¡Hola!</div>
-    <div slot="content">
-      <p>¡Bienvenido a Astro! 🚀</p>
-    </div>
-  </Popover>
-  
+  <!-- <Navbar /> -->
+  <SectionContainer id="home" class="py-16 md:py-36">
+    <Home />
+  </SectionContainer>
+  <SectionContainer id="experience" class="py-6 md:py-16">
+    <SectionTitle> Experiencia laboral </SectionTitle>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum officiis esse facere,
+    deleniti sunt similique quisquam delectus dignissimos, minima eligendi sapiente
+    ex doloribus unde blanditiis dolor, dolorem tenetur a aperiam.
+  </SectionContainer>
+  <SectionContainer id="projects" class="py-6 md:py-16">
+    <SectionTitle> Proyectos </SectionTitle>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iure eligendi
+    similique, obcaecati, possimus laudantium recusandae, vitae illum eius corporis
+    impedit hic ut! Maxime aliquam perspiciatis sapiente ad aspernatur officia!
+  </SectionContainer>
+  <SectionContainer id="about" class="py-6 md:py-16">
+    <SectionTitle> Sobre mi </SectionTitle>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aut corporis
+    repellendus similique officiis soluta commodi dolor facere, ex eaque sunt sequi,
+    vel beatae laborum laudantium, sit minus expedita veniam.
+  </SectionContainer>
+  <SectionContainer id="contact" class="py-6 md:py-16">
+    <SectionTitle> Contacto </SectionTitle>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum corrupti aperiam
+    in tenetur fugit cum vel, ratione explicabo, magnam quae perspiciatis reprehenderit
+    rem libero praesentium repudiandae quidem! Delectus, amet ratione.
+  </SectionContainer>
 </Layout>

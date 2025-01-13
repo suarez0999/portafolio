@@ -1,0 +1,82 @@
+---
+import SkeletonLoader from "./icons/Skeleton.astro";
+import softwareGif from "../../public/softwere-develpment.gif";
+import { Image } from "astro:assets";
+import Button from "./ui/Button.astro";
+import LinkedInIcon from "./icons/Linkedin.astro";
+---
+
+<div class="flex flex-col sm:flex-row items-center gap-8">
+  <!-- Contenedor del texto -->
+  <div class="max-w-xl text-center sm:text-left">
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Hey, soy Diego Suarez
+    </h1>
+    <p
+      class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300 [&>strong]:text-yellow-500 dark:[&>strong]:text-yellow-200 [&>strong]:font-semibold"
+    >
+      Desarrollador Full Stack apasionado por crear <strong
+        >experiencias digitales</strong
+      > excepcionales. Especializado en tecnologías modernas y soluciones escalables.
+    </p>
+    <!-- Botones de navegación -->
+    <nav class="flex flex-wrap justify-center sm:justify-start gap-4 mt-8">
+      <Button
+        href="mailto:diego@example.com"
+        rel="noopener noreferrer"
+        aria-label="Enviar un correo a Diego Suarez"
+      >
+        Contáctame
+      </Button>
+      <Button
+        href="https://linkedin.com/in"
+        rel="noopener noreferrer"
+        aria-label="Perfil de LinkedIn de Diego Suarez"
+      >
+        <LinkedInIcon class="w-5 h-5" />
+        LinkedIn
+      </Button>
+    </nav>
+  </div>
+
+  <!-- Contenedor de la imagen con Skeleton Loader -->
+  <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+    <!-- Skeleton loader -->
+    <div
+      id="skeleton-loader"
+      class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700"
+    >
+      <SkeletonLoader class="text-red-700 dark:text-red"/>
+    </div>
+
+    <!-- Imagen optimizada -->
+    <div id="image-wrapper" class="hidden">
+      <Image
+        src={softwareGif}
+        alt="Gif sobre desarrollo de software"
+        width={600}
+        height={600}
+        loading="eager"
+        class="rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+      />
+    </div>
+  </div>
+
+  <script is:inline>
+    // Simular un retraso en la carga de la imagen
+    document.addEventListener("DOMContentLoaded", () => {
+      const skeletonLoader = document.getElementById("skeleton-loader");
+      const imageWrapper = document.getElementById("image-wrapper");
+
+      // Simular un retraso de 2 segundos
+      setTimeout(() => {
+        if (skeletonLoader) skeletonLoader.style.display = "none";
+        if (imageWrapper) imageWrapper.style.display = "block";
+      }, 9000); // Ajusta el tiempo en milisegundos según tus necesidades
+    });
+  </script>
+</div>
+
+
