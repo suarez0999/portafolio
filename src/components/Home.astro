@@ -1,5 +1,6 @@
----
-import softwareGif from "@public/image/andy.jpg";
+--- 
+import avatarLight from "@public/image/Avatar-Light.webp";
+import avatarDark from "@public/image/Avatar-Dark.webp";
 import { Image } from "astro:assets";
 import Button from "@ui/Button.astro";
 import LinkedInIcon from "@icons/Linkedin.astro";
@@ -12,11 +13,17 @@ import Badge from "@ui/Badge.astro";
   <!-- Contenedor del texto -->
   <div class="max-w-xl sm:text-left animate-fade-in">
     <div class="flex gap-4 mb-4">
-      <!-- Imagen pequeña visible solo en móvil y tablet -->
+      <!-- Avatar pequeño visible solo en móvil/tablet -->
       <Image
-        class="rounded-full shadow-lg size-16 sm:block md:block lg:hidden xl:hidden 2xl:hidden"
-        src={softwareGif}
-        alt="Foto de perfil de Diego Suarez"
+        class="rounded-full shadow-lg size-16 sm:block md:block lg:hidden dark:hidden"
+        src={avatarLight}
+        alt="Avatar personalizado (claro)"
+        loading="eager"
+      />
+      <Image
+        class="rounded-full shadow-lg size-16 sm:block md:block lg:hidden dark:block"
+        src={avatarDark}
+        alt="Avatar personalizado (oscuro)"
         loading="eager"
       />
       <a
@@ -28,42 +35,23 @@ import Badge from "@ui/Badge.astro";
         <Badge>Disponible para trabajar</Badge>
       </a>
     </div>
-    <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-    >
+    <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
       Hey, soy Diego Suarez
     </h1>
-    <p
-      class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300 [&>strong]:text-yellow-500 dark:[&>strong]:text-yellow-200 [&>strong]:font-semibold"
-    >
-      Desarrollador Full Stack apasionado por crear <strong
-        >experiencias digitales</strong
-      > excepcionales. Especializado en tecnologías modernas y soluciones escalables.
+    <p class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+      Desarrollador Full Stack apasionado por crear <strong class="text-yellow-500 dark:text-yellow-200 font-semibold">experiencias digitales</strong> excepcionales. Especializado en tecnologías modernas y soluciones escalables.
     </p>
     <!-- Botones de navegación -->
     <nav class="flex flex-wrap sm:justify-start gap-4 mt-8">
-      <Button
-        href="mailto:suarezdiego4567@gmail.com"
-        rel="noopener noreferrer"
-        aria-label="Enviar un correo a Diego Suarez"
-      >
+      <Button href="mailto:suarezdiego4567@gmail.com" rel="noopener noreferrer" aria-label="Enviar un correo a Diego Suarez">
         <EmailIcon class="w-5 h-5" />
         Contáctame
       </Button>
-      <Button
-        href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
-        rel="noopener noreferrer"
-        aria-label="Perfil de LinkedIn de Diego Suarez"
-      >
+      <Button href="https://www.linkedin.com/in/diego-suarez-desarrollador/" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Diego Suarez">
         <LinkedInIcon class="w-5 h-5" />
         LinkedIn
       </Button>
-      <Button
-        href="/image/softwere-develpment.gif"
-        download="CV-Diego-Suarez"
-        rel="noopener noreferrer"
-        aria-label="Descargar el GIF de desarrollo de software"
-      >
+      <Button href="/image/softwere-develpment.gif" download="CV-Diego-Suarez" rel="noopener noreferrer" aria-label="Descargar el GIF de desarrollo de software">
         <DownloadIcon class="w-5 h-5" />
         Descargar CV
       </Button>
@@ -71,38 +59,44 @@ import Badge from "@ui/Badge.astro";
   </div>
 
   <!-- Contenedor de la imagen con Skeleton Loader -->
-  <div
-    class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg animate-slide-in"
-  >
+  <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg animate-slide-in">
     <!-- Skeleton loader -->
-    <div
-      id="skeleton-loader"
-      class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700 animate-pulse"
-    >
+    <div id="skeleton-loader" class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700 animate-pulse">
       cargando...
     </div>
 
-    <!-- Imagen grande visible solo en escritorio -->
+    <!-- Avatar grande visible solo en escritorio -->
     <div id="image-wrapper" class="hidden sm:block">
       <Image
-        src={softwareGif}
-        alt="Gif sobre desarrollo de software"
+        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block dark:hidden"
+        src={avatarLight}
+        alt="Avatar personalizado (claro)"
         width={600}
         height={600}
         loading="eager"
-        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block"
+      />
+      <Image
+        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block dark:block"
+        src={avatarDark}
+        alt="Avatar personalizado (oscuro)"
+        width={600}
+        height={600}
+        loading="eager"
       />
     </div>
   </div>
 
+  <!-- JavaScript optimizado para manejar el Skeleton Loader -->
   <script is:inline>
     document.addEventListener("DOMContentLoaded", () => {
       const skeletonLoader = document.getElementById("skeleton-loader");
       const imageWrapper = document.getElementById("image-wrapper");
+
+      // Oculta el loader y muestra la imagen después de que la página se cargue completamente
       setTimeout(() => {
-        if (skeletonLoader) skeletonLoader.style.display = "none";
-        if (imageWrapper) imageWrapper.style.display = "block";
-      });
+        skeletonLoader?.classList.add("hidden");
+        imageWrapper?.classList.remove("hidden");
+      }, 1000);
     });
   </script>
 </div>

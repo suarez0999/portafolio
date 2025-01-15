@@ -1,48 +1,64 @@
-# Astro Starter Kit: Basics
+# Portfolio Project
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este proyecto es un portafolio personal diseñado para mostrar mis habilidades, proyectos y experiencia profesional. El objetivo principal es proporcionar una plataforma donde los empleadores potenciales y colaboradores puedan conocer más sobre mi trabajo.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Herramientas Utilizadas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **HTML5**: Para la estructura del contenido del sitio web.
+- **CSS3**: Para el diseño y la presentación visual del sitio.
+- **JavaScript**: Para la interactividad y funcionalidades dinámicas.
+- **Bootstrap**: Para un diseño responsivo y componentes pre-diseñados.
+- **jQuery**: Para simplificar la manipulación del DOM y manejar eventos.
+- **PHP**: Para la lógica del servidor y la gestión de formularios de contacto.
+- **MySQL**: Para la gestión de la base de datos y almacenamiento de información.
+- **Git**: Para el control de versiones y la colaboración en el desarrollo.
+- **Laragon**: Como entorno de desarrollo local para facilitar la configuración y pruebas.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Estructura del Proyecto
 
-## 🚀 Project Structure
+- **index.html**: Página principal del portafolio.
+- **about.html**: Página con información sobre mí.
+- **projects.html**: Página que muestra mis proyectos destacados.
+- **contact.html**: Página con un formulario de contacto.
+- **assets/**: Carpeta que contiene imágenes, estilos y scripts.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Instalación y Uso
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1. Clona el repositorio en tu máquina local:
+    ```bash
+    git clone https://github.com/tu-usuario/portfolio.git
+    ```
+2. Navega al directorio del proyecto:
+    ```bash
+    cd portfolio
+    ```
+3. Abre el proyecto en tu navegador preferido o utiliza un servidor local como Laragon para visualizarlo.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Contribuciones
 
-## 🧞 Commands
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
 
-All commands are run from the root of the project, from a terminal:
+1. Haz un fork del repositorio.
+2. Crea una nueva rama para tu característica o corrección de errores:
+    ```bash
+    git checkout -b feature/nueva-caracteristica
+    ```
+3. Realiza tus cambios y haz commit:
+    ```bash
+    git commit -m "Agrega nueva característica"
+    ```
+4. Envía tus cambios al repositorio remoto:
+    ```bash
+    git push origin feature/nueva-caracteristica
+    ```
+5. Abre un Pull Request en GitHub.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Licencia
 
-## 👀 Want to learn more?
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de mi [correo electrónico](mailto:tu-email@example.com).
+
+¡Gracias por visitar mi portafolio!
