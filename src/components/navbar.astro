@@ -1,0 +1,136 @@
+---
+import Language from "@icons/Language.astro";
+import Button from "@ui/Button.astro";
+---
+
+<nav
+  class="fixed top-0 left-0 w-full flex justify-center items-center mt-4 z-50 text-center"
+>
+  <div
+    class="relative inline-flex items-center bg-white dark:bg-gray-900 rounded-full shadow-lg px-4 py-2"
+  >
+    <!-- Menú Hamburguesa -->
+    <button
+      id="menu-toggle"
+      class="md:hidden p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      ❤️
+    </button>
+
+    <!-- Menú principal -->
+    <div
+      id="menu"
+      class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 md:static absolute top-16 left-0 right-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg md:shadow-none md:bg-transparent md:dark:bg-transparent md:rounded-none transition-all ease-in-out duration-300"
+    >
+      <a
+        href="#home"
+        data-section="home"
+        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
+      >
+        Home
+      </a>
+      <a
+        href="#experience"
+        data-section="experience"
+        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
+      >
+        Experience
+      </a>
+      <a
+        href="#projects"
+        data-section="projects"
+        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
+      >
+        Projects
+      </a>
+      <a
+        href="#about"
+        data-section="about"
+        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
+      >
+        About Me
+      </a>
+      <a
+        href="#contact"
+        data-section="contact"
+        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
+      >
+        Contact
+      </a>
+    </div>
+
+    <!-- Botones de acciones -->
+    <div class="flex items-center space-x-4 ml-4 relative">
+      <!-- Botón de Cambiar Tema -->
+      <Button><Language /></Button>
+
+      <!-- Botón de Cambiar Idioma -->
+      <Button><Language /></Button>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  // Manejador para marcar un enlace como activo al cargar la página
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll("section");
+
+  const clearActiveLinks = () => {
+    navLinks.forEach((link) => {
+      link.classList.remove("text-slate-50", "font-bold", "bg-orange-500");
+      link.setAttribute("aria-current", "false");
+    });
+  };
+
+  const setActiveLinkByScroll = () => {
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        const activeSection = section.getAttribute("id");
+        navLinks.forEach((link) => {
+          if (link.dataset.section === activeSection) {
+            clearActiveLinks();
+            link.classList.add("text-slate-50", "font-bold", "bg-orange-500");
+            link.setAttribute("aria-current", "true");
+          }
+        });
+      }
+    });
+  };
+
+  // Detectar scroll y aplicar la clase activa
+  window.addEventListener("scroll", setActiveLinkByScroll);
+
+  // Detectar posición activa al cargar la página
+  document.addEventListener("DOMContentLoaded", setActiveLinkByScroll);
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      clearActiveLinks();
+      link.classList.add("text-slate-50", "font-bold", "bg-[#3B5797]");
+      link.setAttribute("aria-current", "true");
+      document
+        .querySelector(link.getAttribute("href"))
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  menuToggle.addEventListener("click", () => {
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", !isExpanded);
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("flex");
+    menuToggle.innerHTML = isExpanded ? "<Menu />" : "<Menu />"; // Arreglado para evitar iconos no válidos
+  });
+</script>

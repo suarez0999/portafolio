@@ -1,14 +1,33 @@
 ---
-import softwareGif from "../../public/softwere-develpment.gif";
+import softwareGif from "@public/image/andy.jpg";
 import { Image } from "astro:assets";
-import Button from "./ui/Button.astro";
-import LinkedInIcon from "./icons/Linkedin.astro";
-import EmailIcon from "./icons/Email.astro";
+import Button from "@ui/Button.astro";
+import LinkedInIcon from "@icons/Linkedin.astro";
+import EmailIcon from "@icons/Email.astro";
+import DownloadIcon from "@icons/Download.astro";
+import Badge from "@ui/Badge.astro";
 ---
 
-<div class="flex flex-col sm:flex-row items-center gap-8">
+<div class="flex flex-col sm:flex-row gap-8 p-6 sm:p-12">
   <!-- Contenedor del texto -->
-  <div class="max-w-xl text-center sm:text-left">
+  <div class="max-w-xl sm:text-left animate-fade-in">
+    <div class="flex gap-4 mb-4">
+      <!-- Imagen pequeña visible solo en móvil y tablet -->
+      <Image
+        class="rounded-full shadow-lg size-16 sm:block md:block lg:hidden xl:hidden 2xl:hidden"
+        src={softwareGif}
+        alt="Foto de perfil de Diego Suarez"
+        loading="eager"
+      />
+      <a
+        href="https://linkedin.com/in/midudev"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center transition md:justify-center md:hover:scale-105"
+      >
+        <Badge>Disponible para trabajar</Badge>
+      </a>
+    </div>
     <h1
       class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
@@ -22,9 +41,9 @@ import EmailIcon from "./icons/Email.astro";
       > excepcionales. Especializado en tecnologías modernas y soluciones escalables.
     </p>
     <!-- Botones de navegación -->
-    <nav class="flex flex-wrap justify-center sm:justify-start gap-4 mt-8">
+    <nav class="flex flex-wrap sm:justify-start gap-4 mt-8">
       <Button
-        href="mailto:diego@example.com"
+        href="mailto:suarezdiego4567@gmail.com"
         rel="noopener noreferrer"
         aria-label="Enviar un correo a Diego Suarez"
       >
@@ -32,50 +51,89 @@ import EmailIcon from "./icons/Email.astro";
         Contáctame
       </Button>
       <Button
-        href="https://linkedin.com/in"
+        href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
         rel="noopener noreferrer"
         aria-label="Perfil de LinkedIn de Diego Suarez"
       >
         <LinkedInIcon class="w-5 h-5" />
         LinkedIn
       </Button>
+      <Button
+        href="/image/softwere-develpment.gif"
+        download="CV-Diego-Suarez"
+        rel="noopener noreferrer"
+        aria-label="Descargar el GIF de desarrollo de software"
+      >
+        <DownloadIcon class="w-5 h-5" />
+        Descargar CV
+      </Button>
     </nav>
   </div>
 
   <!-- Contenedor de la imagen con Skeleton Loader -->
-  <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+  <div
+    class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg animate-slide-in"
+  >
     <!-- Skeleton loader -->
     <div
       id="skeleton-loader"
-      class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700"
+      class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700 animate-pulse"
     >
       cargando...
     </div>
 
-    <!-- Imagen optimizada -->
-    <div id="image-wrapper" class="hidden">
+    <!-- Imagen grande visible solo en escritorio -->
+    <div id="image-wrapper" class="hidden sm:block">
       <Image
         src={softwareGif}
         alt="Gif sobre desarrollo de software"
         width={600}
         height={600}
         loading="eager"
-        class="rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block"
       />
     </div>
   </div>
 
   <script is:inline>
-    // Simular un retraso en la carga de la imagen
     document.addEventListener("DOMContentLoaded", () => {
       const skeletonLoader = document.getElementById("skeleton-loader");
       const imageWrapper = document.getElementById("image-wrapper");
-
-      // Simular un retraso de 2 segundos
       setTimeout(() => {
         if (skeletonLoader) skeletonLoader.style.display = "none";
         if (imageWrapper) imageWrapper.style.display = "block";
-      }); // Ajusta el tiempo en milisegundos según tus necesidades
+      });
     });
   </script>
 </div>
+
+<style>
+  /* Animaciones */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 1s ease-in-out;
+  }
+</style>
