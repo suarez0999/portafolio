@@ -1,6 +1,8 @@
 ---
 import Language from "@icons/Language.astro";
 import Button from "@ui/Button.astro";
+import ThemeToggle from "@ui/ThemeToggle.astro";
+import LanguageToggle from "@ui/LanguageToggle.astro";
 ---
 
 <nav
@@ -64,10 +66,10 @@ import Button from "@ui/Button.astro";
     <!-- Botones de acciones -->
     <div class="flex items-center space-x-4 ml-4 relative">
       <!-- Botón de Cambiar Tema -->
-      <Button><Language /></Button>
+      <ThemeToggle/>
 
       <!-- Botón de Cambiar Idioma -->
-      <Button><Language /></Button>
+      <LanguageToggle/>
     </div>
   </div>
 </nav>
