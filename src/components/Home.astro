@@ -15,32 +15,42 @@ import Badge from "@ui/Badge.astro";
     <div class="flex gap-4 mb-4 items-center">
       <!-- Avatar pequeño visible solo en móvil/tablet según tema -->
       <Image
-        class="rounded-full shadow-lg size-16 block sm:hidden dark:hidden"
+        class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden"
         src={avatarLight}
-        alt="Avatar claro pequeño"
-        loading="lazy"
+        alt="Avatar small light mode"
+        loading="eager"
+        title="Avatar small light mode"
       />
+
       <Image
-        class="rounded-full shadow-lg size-16 block sm:hidden dark:block"
+        class="rounded-full shadow-lg size-16 block md:block lg:hidden hidden dark:block"
         src={avatarDark}
-        alt="Avatar oscuro pequeño"
-        loading="lazy"
+        alt="Avatar small dark mode"
+        loading="eager"
+        title="Avatar small dark mode"
       />
+
       <a
-        href="https://linkedin.com/in/midudev"
+        href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
         target="_blank"
         rel="noopener"
+        title="LinkedIn Profile of Diego Suarez"
         class="flex items-center transition md:justify-center md:hover:scale-105"
       >
         <Badge>Disponible para trabajar</Badge>
       </a>
     </div>
-    <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
       Hey, soy Diego Suarez
     </h1>
     <p class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-      Desarrollador Full Stack apasionado por crear <strong class="text-yellow-500 dark:text-yellow-200 font-semibold">
-        experiencias digitales</strong> excepcionales. Especializado en tecnologías modernas y soluciones escalables.
+      Desarrollador Full Stack apasionado por crear <strong
+        class="text-yellow-500 dark:text-yellow-200 font-semibold"
+      >
+        experiencias digitales</strong
+      > excepcionales. Especializado en tecnologías modernas y soluciones escalables.
     </p>
     <!-- Botones de navegación -->
     <nav class="flex flex-wrap sm:justify-start gap-4 mt-8">
@@ -59,7 +69,7 @@ import Badge from "@ui/Badge.astro";
         <LinkedInIcon class="w-5 h-5" /> LinkedIn
       </Button>
       <Button
-        href="/image/softwere-develpment.gif"
+        href="/Curriculum Simple Para Software.pdf"
         download="CV-Diego-Suarez"
         rel="noopener noreferrer"
         aria-label="Descargar CV Diego Suarez"
@@ -70,7 +80,9 @@ import Badge from "@ui/Badge.astro";
   </div>
 
   <!-- Contenedor de la imagen con Skeleton Loader -->
-  <div class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg animate-slide-in">
+  <div
+    class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg animate-slide-in"
+  >
     <div
       id="skeleton-loader"
       class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700 animate-pulse"
@@ -81,18 +93,20 @@ import Badge from "@ui/Badge.astro";
       <Image
         class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block dark:hidden"
         src={avatarLight}
-        alt="Avatar claro grande"
+        alt="Avatar big light mode"
+        title="Avatar big light mode"
         width={600}
         height={600}
-        loading="lazy"
+        loading="eager"
       />
       <Image
-        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block dark:block"
+        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:dark:block"
         src={avatarDark}
-        alt="Avatar oscuro grande"
+        alt="Avatar big dark mode"
+        title="Avatar big dark mode"
         width={600}
         height={600}
-        loading="lazy"
+        loading="eager"
       />
     </div>
   </div>

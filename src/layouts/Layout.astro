@@ -1,12 +1,69 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta Caracteres -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Vista para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon para mayor accesibilidad -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Etiquetas de Metadatos para SEO -->
     <meta name="generator" content={Astro.generator} />
-    <title>Porfolio - Diego Suarez</title>
-  </head>
+    <meta name="author" content="Diego Suarez" />
+    
+    <!-- Descripción -->
+    <meta
+      name="description"
+      content="Portfolio de Diego Suarez, desarrollador Full Stack especializado en crear experiencias digitales excepcionales con tecnologías modernas."
+    />
+    
+    <!-- Palabras clave -->
+    <meta
+      name="keywords"
+      content="Diego Suarez, desarrollador software, full stack developer, portfolio, experiencias digitales, tecnologías modernas, soluciones escalables, desarrollo web, desarrollo full stack, desarrollador front end, desarrollador back end"
+    />
+    
+    <!-- Indexación y Rastreo -->
+    <meta name="robots" content="index, follow" />
+    <meta name="canonical" content="https://tusitio.com" />
+    
+    <!-- Open Graph (OG) Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio - Diego Suarez, Desarrollador Full-Stack" />
+    <meta
+      property="og:description"
+      content="Portfolio de Diego Suarez, desarrollador Full Stack especializado en crear experiencias digitales excepcionales con tecnologías modernas."
+    />
+    <meta property="og:url" content="https://tusitio.com" />
+    <meta property="og:image" content="/image/img.png" />
+    <meta property="og:locale" content="es_CO" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio - Diego Suarez, Desarrollador Full-Stack" />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Diego Suarez, desarrollador Full Stack especializado en crear experiencias digitales excepcionales con tecnologías modernas."
+    />
+    <meta
+      name="twitter:image"
+      content="/image/img.png"
+    />
+
+    <!-- Título de la Página -->
+    <title>Portfolio - Diego Suarez, Desarrollador Full-Stack</title>
+
+    <!-- Sumario visible en la página -->
+    <meta
+      name="description"
+      content="Portfolio de Diego Suarez - Desarrollador Full Stack apasionado por crear experiencias digitales excepcionales. Especializado en tecnologías modernas y soluciones escalables."
+    />
+</head>
+
+
   <body>
     <slot />
   </body>
@@ -22,7 +79,7 @@
   }
 
   body {
-    @apply bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200;
+    @apply bg-gray-200 text-gray-800 dark:bg-gray-900 dark:text-gray-200;
     width: 100%;
     height: 100%;
     scrollbar-width: thin; /* Firefox */
@@ -55,4 +112,3 @@
     height: 8px;
   }
 </style>
-
