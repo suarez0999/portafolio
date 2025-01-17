@@ -1,9 +1,9 @@
 ---
 import SunIcon from "@icons/Sun.astro";
 import MoonIcon from "@icons/Moon.astro";
-import SystemIcon from "@icons/System.astro";
+import systemIcon from "@icons/System.astro";
 
-const LANGUAGES = ["Spanish", "English", "System"];
+const LANGUAGES = ["Spanish", "English", "systemLanguage"];
 ---
 
 <div class="relative ml-1 mr-1">
@@ -18,8 +18,8 @@ const LANGUAGES = ["Spanish", "English", "System"];
       id="english"
       class="language-toggle-icon absolute size-5 transition-all"
     />
-    <SystemIcon
-      id="system"
+    <systemLanguageIcon
+      id="systemLanguage"
       class="language-toggle-icon absolute size-5 transition-all"
     />
   </button>
@@ -65,10 +65,10 @@ const LANGUAGES = ["Spanish", "English", "System"];
 
   const getLanguagePreference = () => {
     if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("language") ?? "system";
+      return localStorage.getItem("language") ?? "systemLanguage";
     }
 
-    return "system";
+    return "systemLanguage";
   };
 
   const updateIcon = (languagePreference) => {

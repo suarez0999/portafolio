@@ -9,10 +9,10 @@ import DownloadIcon from "@icons/Download.astro";
 import Badge from "@ui/Badge.astro";
 ---
 
-<div class="flex flex-col sm:flex-row gap-8 p-6 sm:p-12">
+<header class="flex flex-col sm:flex-row gap-8 p-6 sm:p-12" role="banner">
   <!-- Contenedor del texto -->
-  <div class="max-w-xl sm:text-left animate-fade-in">
-    <div class="flex gap-4 mb-4 items-center">
+  <main class="max-w-xl sm:text-left animate-fade-in" role="main">
+    <section class="flex gap-4 mb-4 items-center">
       <!-- Avatar pequeño visible solo en móvil/tablet según tema -->
       <Image
         class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden"
@@ -29,42 +29,46 @@ import Badge from "@ui/Badge.astro";
         loading="eager"
         title="Avatar small dark mode"
       />
-
       <a
         href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
         target="_blank"
         rel="noopener"
-        title="LinkedIn Profile of Diego Suarez"
-        class="flex items-center transition md:justify-center md:hover:scale-105"
+        aria-label="Ir al perfil de LinkedIn de Diego Suarez"
+        class="flex items-center transition-transform hover:scale-105"
       >
         <Badge>Disponible para trabajar</Badge>
       </a>
-    </div>
+    </section>
     <h1
       class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
       Hey, soy Diego Suarez
     </h1>
     <p class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-      Desarrollador Full Stack apasionado por crear <strong
-        class="text-yellow-500 dark:text-yellow-200 font-semibold"
-      >
-        experiencias digitales</strong
-      > excepcionales. Especializado en tecnologías modernas y soluciones escalables.
+      Desarrollador Full Stack apasionado por crear
+      <strong class="text-yellow-500 dark:text-yellow-200 font-semibold">
+        experiencias digitales
+      </strong>
+      excepcionales. Especializado en tecnologías modernas y soluciones escalables.
     </p>
     <!-- Botones de navegación -->
-    <nav class="flex flex-wrap sm:justify-start gap-4 mt-8">
+    <nav
+      class="flex flex-wrap sm:justify-start gap-4 mt-8"
+      aria-label="Navegación principal"
+    >
       <Button
         href="mailto:suarezdiego4567@gmail.com"
         rel="noopener noreferrer"
         aria-label="Enviar un correo a Diego Suarez"
+        title="Enviar un correo a Diego Suarez"
       >
         <EmailIcon class="w-5 h-5" /> Contáctame
       </Button>
       <Button
         href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
         rel="noopener noreferrer"
-        aria-label="Perfil de LinkedIn de Diego Suarez"
+        aria-label="Ir al perfil de LinkedIn de Diego Suarez"
+        title="Ir al perfil de LinkedIn de Diego Suarez"
       >
         <LinkedInIcon class="w-5 h-5" /> LinkedIn
       </Button>
@@ -72,23 +76,19 @@ import Badge from "@ui/Badge.astro";
         href="/Curriculum Simple Para Software.pdf"
         download="CV-Diego-Suarez"
         rel="noopener noreferrer"
-        aria-label="Descargar CV Diego Suarez"
+        aria-label="Descargar el CV de Diego Suarez"
+        title="Descargar el CV de Diego Suarez"
       >
         <DownloadIcon class="w-5 h-5" /> Descargar CV
       </Button>
     </nav>
-  </div>
+  </main>
 
   <!-- Contenedor de la imagen con Skeleton Loader -->
-  <div
+  <section
     class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg animate-slide-in"
+    aria-labelledby="imagen-perfil"
   >
-    <div
-      id="skeleton-loader"
-      class="absolute inset-0 flex items-center justify-center rounded-lg bg-gray-300 dark:bg-gray-700 animate-pulse"
-    >
-      Cargando...
-    </div>
     <div id="image-wrapper" class="hidden sm:block">
       <Image
         class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block dark:hidden"
@@ -109,18 +109,8 @@ import Badge from "@ui/Badge.astro";
         loading="eager"
       />
     </div>
-  </div>
-
-  <!-- JavaScript optimizado -->
-  <script is:inline>
-    window.addEventListener("load", () => {
-      const skeletonLoader = document.getElementById("skeleton-loader");
-      const imageWrapper = document.getElementById("image-wrapper");
-      if (skeletonLoader) skeletonLoader.classList.add("hidden");
-      if (imageWrapper) imageWrapper.classList.remove("hidden");
-    });
-  </script>
-</div>
+  </section>
+</header>
 
 <style>
   /* Animaciones */

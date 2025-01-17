@@ -1,12 +1,12 @@
 ---
-import Language from "@icons/Language.astro";
-import Button from "@ui/Button.astro";
 import ThemeToggle from "@ui/ThemeToggle.astro";
 import LanguageToggle from "@ui/LanguageToggle.astro";
 ---
 
 <nav
-  class="fixed top-0 left-0 w-full flex justify-center items-center mt-4 z-50 text-center"
+  class="fixed top-0 left-0 w-full flex justify-center items-center mt-4 z-50 text-center bg-opacity-90 backdrop-blur-md"
+  role="navigation"
+  aria-label="Main Navigation"
 >
   <div
     class="relative inline-flex items-center bg-white dark:bg-gray-800 rounded-full shadow-lg px-4 py-2"
@@ -15,124 +15,130 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
     <button
       id="menu-toggle"
       class="md:hidden p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition"
-      aria-label="Abrir menú"
+      aria-label="Toggle menu"
       aria-expanded="false"
     >
-      ❤️
+      <span class="sr-only">Toggle menu</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+      </svg>
     </button>
 
     <!-- Menú principal -->
     <div
       id="menu"
-      class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 md:static absolute top-16 left-0 right-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg md:shadow-none md:bg-transparent md:dark:bg-transparent md:rounded-none transition-all ease-in-out duration-300"
+      class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 md:static absolute top-16 left-0 right-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg md:shadow-none md:bg-transparent md:dark:bg-transparent md:rounded-none transition-transform transform ease-in-out duration-300"
     >
-      <a
-        href="#home"
-        data-section="home"
-        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
-      >
-        Home
-      </a>
-      <a
-        href="#experience"
-        data-section="experience"
-        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
-      >
-        Experience
-      </a>
-      <a
-        href="#projects"
-        data-section="projects"
-        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
-      >
-        Projects
-      </a>
-      <a
-        href="#about"
-        data-section="about"
-        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
-      >
-        About Me
-      </a>
-      <a
-        href="#contact"
-        data-section="contact"
-        class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-slate-50 hover:text-slate-50 transition"
-      >
-        Contact
-      </a>
+      {["home", "experience", "projects", "about", "contact"].map((section) => (
+        <a
+          key={section}
+          href={`#${section}`}
+          data-section={section}
+          class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-gray-200 hover:bg-orange-500 hover:text-white transition"
+          aria-current="false"
+        >
+          {section.charAt(0).toUpperCase() + section.slice(1)}
+        </a>
+      ))}
     </div>
 
     <!-- Botones de acciones -->
-    <div class="flex items-center space-x-4 ml-4 relative">
-      <!-- Botón de Cambiar Tema -->
-      <ThemeToggle/>
-
-      <!-- Botón de Cambiar Idioma -->
-      <LanguageToggle/>
+    <div class="flex items-center space-x-4 ml-4">
+      <ThemeToggle />
+      <LanguageToggle />
     </div>
   </div>
 </nav>
 
 <script is:inline>
-  // Manejador para marcar un enlace como activo al cargar la página
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll("section");
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section[id]");
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
 
-  const clearActiveLinks = () => {
+    // Función para limpiar los enlaces activos
+    const clearActiveLinks = () => {
+      navLinks.forEach((link) => {
+        link.classList.remove("font-bold", "bg-orange-500", "text-white");
+        link.setAttribute("aria-current", "false");
+      });
+    };
+
+    // Función para establecer el enlace activo basado en el desplazamiento
+    const setActiveLinkByScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          const activeSectionId = section.getAttribute("id");
+          clearActiveLinks();
+          navLinks.forEach((link) => {
+            if (link.dataset.section === activeSectionId) {
+              link.classList.add("font-bold", "bg-orange-500", "text-white");
+              link.setAttribute("aria-current", "true");
+            }
+          });
+        }
+      });
+    };
+
+    // Manejadores de clic para los enlaces del menú
     navLinks.forEach((link) => {
-      link.classList.remove("text-slate-50", "font-bold", "bg-orange-500");
-      link.setAttribute("aria-current", "false");
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetSection = document.querySelector(link.getAttribute("href"));
+
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+
+        clearActiveLinks();
+        link.classList.add("font-bold", "bg-orange-500", "text-white");
+        link.setAttribute("aria-current", "true");
+
+        // Cerrar el menú si está abierto
+        if (!menu.classList.contains("hidden")) {
+          menu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
     });
-  };
 
-  const setActiveLinkByScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
+    // Alternar el menú móvil
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+      menu.classList.toggle("hidden");
+    });
 
-      if (
-        scrollPosition >= sectionTop &&
-        scrollPosition < sectionTop + sectionHeight
-      ) {
-        const activeSection = section.getAttribute("id");
-        navLinks.forEach((link) => {
-          if (link.dataset.section === activeSection) {
-            clearActiveLinks();
-            link.classList.add("text-slate-50", "font-bold", "bg-orange-500");
-            link.setAttribute("aria-current", "true");
-          }
-        });
+    // Detectar clics fuera del menú para cerrarlo
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target) && event.target !== menuToggle) {
+        menu.classList.add("hidden");
+        menuToggle.setAttribute("aria-expanded", "false");
       }
     });
-  };
 
-  // Detectar scroll y aplicar la clase activa
-  window.addEventListener("scroll", setActiveLinkByScroll);
-
-  // Detectar posición activa al cargar la página
-  document.addEventListener("DOMContentLoaded", setActiveLinkByScroll);
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      clearActiveLinks();
-      link.classList.add("text-slate-50", "font-bold", "bg-[#3B5797]");
-      link.setAttribute("aria-current", "true");
-      document
-        .querySelector(link.getAttribute("href"))
-        .scrollIntoView({ behavior: "smooth" });
-    });
-  });
-
-  const menuToggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
-  menuToggle.addEventListener("click", () => {
-    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", !isExpanded);
-    menu.classList.toggle("hidden");
-    menu.classList.toggle("flex");
-    menuToggle.innerHTML = isExpanded ? "<Menu />" : "<Menu />"; // Arreglado para evitar iconos no válidos
+    // Evento de scroll para cambiar el enlace activo
+    window.addEventListener("scroll", setActiveLinkByScroll);
+    setActiveLinkByScroll();
   });
 </script>
