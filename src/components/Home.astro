@@ -1,0 +1,141 @@
+---
+import avatarLight from "@public/image/Avatar-Light.webp";
+import avatarDark from "@public/image/Avatar-Dark.webp";
+import { Image } from "astro:assets";
+import Button from "@ui/Button.astro";
+import LinkedInIcon from "@icons/Linkedin.astro";
+import EmailIcon from "@icons/Email.astro";
+import DownloadIcon from "@icons/Download.astro";
+import Badge from "@ui/Badge.astro";
+---
+
+<header class="flex flex-col sm:flex-row gap-8 p-6 sm:p-12" role="banner">
+  <!-- Contenedor del texto -->
+  <main class="max-w-xl sm:text-left animate-fade-in" role="main">
+    <section class="flex gap-4 mb-4 items-center">
+      <!-- Avatar pequeño visible solo en móvil/tablet según tema -->
+      <Image
+        class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden"
+        src={avatarLight}
+        alt="Avatar small light mode"
+        loading="eager"
+        title="Avatar small light mode"
+      />
+
+      <Image
+        class="rounded-full shadow-lg size-16 block md:hidden lg:hidden hidden dark:block lg:dark:hidden"
+        src={avatarDark}
+        alt="Avatar small dark mode"
+        loading="eager"
+        title="Avatar small dark mode"
+      />
+      <a
+        href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Ir al perfil de LinkedIn de Diego Suarez"
+        class="flex items-center transition-transform hover:scale-105"
+      >
+        <Badge>Disponible para trabajar</Badge>
+      </a>
+    </section>
+    <h1
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+    >
+      Hey, soy Diego Suarez
+    </h1>
+    <p class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+      Desarrollador Full Stack apasionado por crear
+      <strong class="text-yellow-500 dark:text-yellow-200 font-semibold">
+        experiencias digitales
+      </strong>
+      excepcionales. Especializado en tecnologías modernas y soluciones escalables.
+    </p>
+    <!-- Botones de navegación -->
+    <nav
+      class="flex flex-wrap sm:justify-start gap-4 mt-8"
+      aria-label="Navegación principal"
+    >
+      <Button
+        href="mailto:suarezdiego4567@gmail.com"
+        rel="noopener noreferrer"
+        aria-label="Enviar un correo a Diego Suarez"
+        title="Enviar un correo a Diego Suarez"
+      >
+        <EmailIcon class="w-5 h-5" /> Contáctame
+      </Button>
+      <Button
+        href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
+        rel="noopener noreferrer"
+        aria-label="Ir al perfil de LinkedIn de Diego Suarez"
+        title="Ir al perfil de LinkedIn de Diego Suarez"
+      >
+        <LinkedInIcon class="w-5 h-5" /> LinkedIn
+      </Button>
+      <Button
+        href="/Curriculum Simple Para Software.pdf"
+        download="CV-Diego-Suarez"
+        rel="noopener noreferrer"
+        aria-label="Descargar el CV de Diego Suarez"
+        title="Descargar el CV de Diego Suarez"
+      >
+        <DownloadIcon class="w-5 h-5" /> Descargar CV
+      </Button>
+    </nav>
+  </main>
+
+  <!-- Contenedor de la imagen con Skeleton Loader -->
+  <section
+    class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg animate-slide-in"
+    aria-labelledby="imagen-perfil"
+  >
+    <div id="image-wrapper" class="hidden sm:block">
+      <Image
+        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block dark:hidden"
+        src={avatarLight}
+        alt="Avatar big light mode"
+        title="Avatar big light mode"
+        width={600}
+        height={600}
+        loading="eager"
+      />
+      <Image
+        class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:dark:block"
+        src={avatarDark}
+        alt="Avatar big dark mode"
+        title="Avatar big dark mode"
+        width={600}
+        height={600}
+        loading="eager"
+      />
+    </div>
+  </section>
+</header>
+
+<style>
+  /* Animaciones */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+  .animate-slide-in {
+    animation: slide-in 1s ease-in-out;
+  }
+</style>

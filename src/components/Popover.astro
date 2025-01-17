@@ -1,0 +1,58 @@
+---
+// Importa las propiedades
+export interface Props {
+  className?: string;
+}
+
+// Obtén las propiedades desde Astro.props
+const { className = "" } = Astro.props;
+---
+
+<div class={`relative inline-block ${className}`}>
+  <!-- Botón -->
+  <div id="popover-button" class="inline-block">
+    <slot name="buttonContent" />
+  </div>
+
+  <!-- Popover -->
+  <div
+    id="popover-default"
+    role="tooltip"
+    class="absolute z-10 hidden w-64 text-sm text-gray-500 bg-white border border-gray-200 rounded-lg shadow-md dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 -translate-x-1/2 bottom-full left-1/2 mb-2"
+  >
+    <!-- Encabezado -->
+    <div
+      class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:bg-gray-700 dark:border-gray-600"
+    >
+      <slot name="title">
+        <!-- Fallback en caso de que no se pase contenido -->
+        <span class="text-gray-700 dark:text-white">Sin Título</span>
+      </slot>
+    </div>
+    <!-- Contenido -->
+    <div class="px-3 py-2">
+      <slot name="content" />
+      <!-- Triángulo invertido -->
+      <div
+        class="absolute left-1/2 bottom-0 transform translate-y-full -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-gray-200 dark:border-t-gray-600"
+      >
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script is:inline>
+    // Seleccionar los elementos del DOM
+    const buttonContainer = document.getElementById("popover-button");
+    const popover = document.getElementById("popover-default");
+
+    const togglePopover = (visible) => {
+      popover.classList.toggle("hidden", !visible);
+      popover.classList.toggle("block", visible);
+    };
+
+    // Asegúrate de que el contenido dentro del botón sea interactivo
+    buttonContainer.addEventListener("mouseenter", () => togglePopover(true));
+    buttonContainer.addEventListener("mouseleave", () => togglePopover(false));
+  </script>
+</div>
