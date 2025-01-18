@@ -1,0 +1,16 @@
+---
+// Props esperadas
+interface Props {
+  Icon: any; // Componente del ícono que se mostrará
+  text: string; // Texto a mostrar
+}
+
+const { Icon, text } = Astro.props;
+---
+
+<div class="flex items-center space-x-4">
+  <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-500">
+    <Icon class="w-6 h-6" />
+  </div>
+  <p class="text-sm">{text}</p>
+</div>
