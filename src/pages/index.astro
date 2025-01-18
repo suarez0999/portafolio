@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import SectionTitle from "../components/ui/SectionTitle.astro";
-import SectionContainer from "../components/ui/SectionContainer.astro";
-import Home from "../components/Home.astro";
-import Navbar from "../components/navbar.astro";
-import Tegnologias from "../components/tecnologias.astro";
+import Layout from "@layouts/Layout.astro";
+import SectionTitle from "@ui/SectionTitle.astro";
+import SectionContainer from "@ui/SectionContainer.astro";
+import Home from "@components/Home.astro";
+import Navbar from "@components/Navbar.astro";
+import Tegnologias from "@components/Skills.astro";
 import ContactForm from "@components/ContactForm.astro";
-import ProjectCard from "@components/Proyects.astro";
-import ExperienceCard from "@components/experice.astro";
+import ProjectCard from "@components/Project.astro";
+import ExperienceCard from "@components/Experience.astro";
 import About from "@components/AboutMe.astro";
 import Footer from "@components/Footer.astro";
 ---
@@ -29,17 +29,17 @@ import Footer from "@components/Footer.astro";
     <ProjectCard />
   </SectionContainer>
   <SectionContainer id="skills" class="py-6 md:py-16">
-    <SectionTitle> Tecnologías  </SectionTitle>
+    <SectionTitle> Tecnologías </SectionTitle>
     <Tegnologias />
   </SectionContainer>
   <SectionContainer id="about" class="py-6 md:py-16">
     <SectionTitle> Sobre mi </SectionTitle>
-   <About />
+    <About />
   </SectionContainer>
   <SectionContainer id="contact" class="py-6 md:py-16">
     <SectionTitle> Contacto </SectionTitle>
-<ContactForm />
+    <ContactForm />
   </SectionContainer>
   <!-- footer -->
-   <Footer />
+  <Footer />
 </Layout>
