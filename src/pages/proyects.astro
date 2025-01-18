@@ -1,0 +1,26 @@
+---
+import SectionTitle from "../components/ui/SectionTitle.astro";
+import SectionContainer from "../components/ui/SectionContainer.astro";
+import Card from "../components/Proyects.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout>
+  <SectionContainer class="py-16 md:py-36 text-center">
+    <h1 class="text-3xl font-bold text-slate-800">Mis Proyectos</h1>
+    <p class="mt-4 text-lg text-gray-600">
+      Aquí puedes encontrar una selección de mis proyectos más recientes.
+    </p>
+  </SectionContainer>
+
+  <SectionContainer class="py-6 md:py-16">
+    <SectionTitle>Proyectos Backend</SectionTitle>
+
+    <Card title="Proyecto 1" description="Descripción del proyecto 1" />
+  </SectionContainer>
+  <SectionContainer class="py-6 md:py-16">
+    <SectionTitle>Proyectos Fronten</SectionTitle>
+
+    <Card title="Proyecto 1" description="Descripción del proyecto 1" />
+  </SectionContainer>
+</Layout>
