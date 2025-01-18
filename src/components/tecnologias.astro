@@ -1,29 +1,129 @@
-<!-- Nueva sección de habilidades -->
-<div class="mt-16 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-gray-800 dark:text-white">
-      Tecnologías y Habilidades
-    </h2>
-    <p class="mt-4 text-gray-700 dark:text-gray-300">
-      Estas son algunas de las herramientas y tecnologías con las que trabajo:
-    </p>
-    <ul class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-800 dark:text-white">
-      <li class="flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-        JavaScript
-      </li>
-      <li class="flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-        TypeScript
-      </li>
-      <li class="flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-        React
-      </li>
-      <li class="flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-        Node.js
-      </li>
-      <li class="flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-        Tailwind CSS
-      </li>
-      <li class="flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg">
-        Git & GitHub
-      </li>
-    </ul>
+---
+import JavaScripIcon from "@icons/JavaScrip.astro";
+import TypeScripIcon from "@icons/TypeScrip.astro";
+import MySQLIcon from "@icons/MySQL.astro";
+import NodejsIcon from "@icons/Nodejs.astro";
+import MongoDBIcon from "@icons/MongoDB.astro";
+import ReactIcon from "@icons/React.astro";
+import TailwindIcon from "@icons/TailwindCSS.astro";
+import GitIcon from "@icons/Git.astro";
+import DockerIcon from "@icons/Docker.astro";
+import FigmaIcon from "@icons/Figma.astro";
+import AstroIcon from "@icons/Astro.astro";
+import PhpIcon from "@icons/Php.astro";
+---
+
+<div class="mt-16 max-w-5xl mx-auto text-center">
+  <div
+    class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 auto-rows-fr"
+  >
+    <!-- JavaScript -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <JavaScripIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >JavaScript</span
+      >
+    </div>
+    <!-- TypeScript -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <TypeScripIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >TypeScript</span
+      >
+    </div>
+    <!-- React -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <ReactIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >React</span
+      >
+    </div>
+    <!-- Node.js -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <NodejsIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >Node.js</span
+      >
+    </div>
+    <!-- Tailwind CSS -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <TailwindIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >Tailwind CSS</span
+      >
+    </div>
+    <!-- Git -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <GitIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >Git & GitHub</span
+      >
+    </div>
+    <!-- Docker -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <DockerIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >Docker</span
+      >
+    </div>
+    <!-- MongoDB -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <MongoDBIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >MongoDB</span
+      >
+    </div>
+    <!-- Figma -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <FigmaIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >Figma</span
+      >
+    </div>
+    <!-- MySQL -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <MySQLIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >MySQL</span
+      >
+    </div>
+    <!-- PHP -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <PhpIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >PHP</span
+      >
+    </div>
+    <!-- Astro -->
+    <div
+      class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+    >
+      <AstroIcon class="h-12 w-12 mb-2" />
+      <span class="text-sm font-medium text-gray-900 dark:text-gray-100"
+        >Astro</span
+      >
+    </div>
   </div>
+</div>

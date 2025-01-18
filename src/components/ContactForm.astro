@@ -1,0 +1,106 @@
+---
+import PhoneIcon from "@icons/Phone.astro";
+import EmailIcon from "@icons/Email.astro";
+import LocationIcon from "@icons/MapPin.astro";
+import ContactInfo from "@ui/ContactInfo.astro";
+---
+
+<div class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen flex items-center justify-center">
+  <div class="max-w-4xl w-full mx-4">
+    <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+      <div class="md:flex">
+        <!-- Formulario -->
+        <section class="p-8 md:w-2/3">
+          <h2 class="text-2xl font-bold mb-6">Contáctanos</h2>
+          <p class="mb-4 text-gray-600 dark:text-gray-400">
+            Si tienes alguna pregunta o comentario, por favor llena el formulario a continuación.
+          </p>
+          <form>
+            <!-- Agrupación de campos -->
+            <fieldset class="mb-4">
+              <legend class="sr-only">Información personal</legend>
+              <!-- Nombre -->
+              <div class="mb-4">
+                <label for="nombre" class="block text-sm font-medium mb-1">Nombre</label>
+                <input
+                  id="nombre"
+                  type="text"
+                  class="input-field"
+                  placeholder="Ingresa tu nombre"
+                />
+              </div>
+               <!-- correo electrónico -->
+               <div class="mb-4">
+                <label for="email" class="block text-sm font-medium mb-1">correo electrónico</label>
+                <input
+                  id="email"
+                  type="email"
+                  class="input-field"
+                  placeholder="Ingresa tu correo electrónico"
+                />
+              </div>
+              <!-- Teléfono -->
+              <div class="mb-4">
+                <label for="telefono" class="block text-sm font-medium mb-1">Número de teléfono</label>
+                <input
+                  id="telefono"
+                  type="tel"
+                  class="input-field"
+                  placeholder="(+57) 123-4567"
+                />
+              </div>      
+            </fieldset>
+            <!-- Mensaje -->
+            <fieldset>
+              <legend class="sr-only">Tu mensaje</legend>
+              <div class="mb-4">
+                <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+                <textarea
+                  id="mensaje"
+                  rows="4"
+                  class="input-field"
+                  placeholder="Escribe tu mensaje aquí"></textarea>
+              </div>
+            </fieldset>
+            <!-- Botón de enviar -->
+            <div>
+              <button
+                type="submit"
+                class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600 transition-transform transform hover:scale-105 duration-300"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Información de contacto -->
+        <section class="p-8 md:w-1/3 bg-blue-500 dark:bg-blue-600 text-white">
+          <h2 class="text-xl font-bold mb-4">Información de Contacto</h2>
+          <address class="space-y-4 not-italic">
+            <ContactInfo Icon={PhoneIcon} text="+57 300 123 4567" />
+            <ContactInfo Icon={EmailIcon} text="contacto@ejemplo.com" />
+            <ContactInfo Icon={LocationIcon} text="Calle 123 #45-67, Bogotá" />
+          </address>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .input-field {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 0.375rem;
+    background-color: var(--bg-color, #fff);
+    color: var(--text-color, #000);
+    transition: border-color 0.3s ease;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: #3b82f6; /* Azul para el foco */
+    box-shadow: 0 0 0 2px #bfdbfe; /* Sombra */
+  }
+</style>
