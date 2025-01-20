@@ -5,7 +5,7 @@ import SectionContainer from "@ui/SectionContainer.astro";
 import Home from "@components/Home.astro";
 import Navbar from "@components/Navbar.astro";
 import Tegnologias from "@components/Skills.astro";
-import ContactForm from "@components/ContactForm.astro";
+import Contact from "@components/Contact.astro";
 import ProjectCard from "@components/Project.astro";
 import ExperienceCard from "@components/Experience.astro";
 import About from "@components/AboutMe.astro";
@@ -25,13 +25,21 @@ import UserIcon from "@components/icons/UserIcon.astro";
   <SectionContainer id="experience" class="py-6 md:py-16">
     <SectionTitle>
       <BriefcaseIcon class="size-8" />
-      Experiencia laboral
+      Experiencia Laboral
     </SectionTitle>
+    <p
+      class="mb-4 text-base font-medium text-gray-700 dark:text-gray-300 leading-relaxed"
+    >
+      Descubre mi trayectoria profesional, incluyendo los roles clave que he
+      desempeñado, los proyectos en los que he contribuido y los logros que han
+      marcado mi carrera.
+    </p>
 
     <ExperienceCard />
   </SectionContainer>
   <SectionContainer id="projects" class="py-6 md:py-16">
     <SectionTitle> Proyectos </SectionTitle>
+
     <ProjectCard />
   </SectionContainer>
   <SectionContainer id="skills" class="py-6 md:py-16">
@@ -48,10 +56,8 @@ import UserIcon from "@components/icons/UserIcon.astro";
     </SectionTitle>
     <About />
   </SectionContainer>
-  <SectionContainer id="contact" class="py-6 md:py-16">
-    <SectionTitle> Contacto </SectionTitle>
-    <ContactForm />
-  </SectionContainer>
+  <Contact />
+
   <!-- footer -->
   <Footer />
 </Layout>
