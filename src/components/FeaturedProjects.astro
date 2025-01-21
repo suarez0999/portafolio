@@ -1,0 +1,67 @@
+---
+// Importa el componente
+import ProjectCard from "@ui/ProjectCard.astro";
+import GitIcon from "@icons/GitIcon.astro";
+import ArrowRight from "@icons/ArrowRight.astro";
+
+// Datos de ejemplo
+const projects = [
+  {
+    imageUrl: "/images/Portada.webp",
+    imageAlt: "Vista previa del proyecto 1",
+    title: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
+    skills: [
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+    ],
+    githubLink: "https://github.com",
+    demoLink: "https://example.com",
+  },
+  {
+    imageUrl: "/images/Portada.webp",
+    imageAlt: "Vista previa del proyecto 1",
+    title: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
+    skills: [
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+    ],
+    githubLink: "https://github.com",
+    demoLink: "https://example.com",
+  },
+];
+---
+
+<section
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center items-start"
+  aria-labelledby="projects-section"
+>
+  {projects.map((project) => (
+    <ProjectCard {...project} />
+  ))}
+</section>
+
+<section class="flex justify-center mt-6">
+  <a
+    class="group rounded-lg bg-white shadow-md border border-slate-200 py-3 px-8 text-sm text-slate-800 flex items-center gap-3 transform hover:scale-105 hover:shadow-lg hover:bg-slate-100 focus:ring-4 focus:ring-slate-500 transition-all duration-500
+      dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-400"
+    type="button"
+    href="/projects"
+    aria-label="Explorar más proyectos"
+  >
+    <span
+      class="group-hover:text-slate-700 dark:group-hover:text-gray-300 transition-colors duration-300"
+    >
+      Ver más proyectos
+    </span>
+    <ArrowRight
+      class="w-5 h-5 group-hover:translate-x-2 group-hover:rotate-45 transition-transform duration-300"
+    />
+  </a>
+</section>
+

@@ -1,0 +1,119 @@
+---
+// Importa el componente
+import ProjectCard from "@ui/ProjectCard.astro";
+import GitIcon from "@icons/GitIcon.astro";
+import ArrowRight from "@icons/ArrowRight.astro";
+
+// Datos de ejemplo
+const projects = [
+  {
+    imageUrl: "/images/Portada.webp",
+    imageAlt: "Vista previa del proyecto 1",
+    title: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
+    skills: [
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+    ],
+    githubLink: "https://github.com",
+    demoLink: "https://example.com",
+  },
+  {
+    imageUrl: "/images/Portada.webp",
+    imageAlt: "Vista previa del proyecto 1",
+    title: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
+    skills: [
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+    ],
+    githubLink: "https://github.com",
+    demoLink: "https://example.com",
+  },
+  {
+    imageUrl: "/images/Portada.webp",
+    imageAlt: "Vista previa del proyecto 1",
+    title: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
+    skills: [
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+    ],
+    githubLink: "https://github.com",
+    demoLink: "https://example.com",
+  },
+  {
+    imageUrl: "/images/Portada.webp",
+    imageAlt: "Vista previa del proyecto 1",
+    title: "Proyecto 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
+    skills: [
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
+    ],
+    githubLink: "https://github.com",
+    demoLink: "https://example.com",
+  },
+];
+---
+
+<section
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center items-start"
+  aria-labelledby="projects-section"
+>
+<div
+  class="relative flex flex-col items-center justify-center my-6 bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 rounded-lg w-96 h-[520px] overflow-hidden hover:shadow-lg transition-shadow duration-500 group "
+  role="article"
+  aria-labelledby="project-title"
+>
+  <!-- Imagen de fondo -->
+   
+  <div class="absolute inset-0">
+    <img
+      src="/images/Avatar-Light.webp"
+      alt="Más proyectos próximamente"
+      class="h-full w-full object-cover opacity-50 group-hover:opacity-30 transition-opacity duration-500"
+    />
+  </div>
+
+  <!-- Contenido superpuesto -->
+  <div
+    class="relative z-10 flex flex-col items-center justify-center p-4 text-center"
+  >
+    <h2
+      id="project-title"
+      class="text-slate-800 dark:text-gray-200 text-lg font-semibold mb-2 transition-colors duration-500"
+    >
+      Más proyectos próximamente
+    </h2>
+    <p class="text-slate-600 dark:text-gray-400 text-sm">
+      Estamos trabajando para traerte más proyectos increíbles. ¡Espéralos
+      pronto!
+    </p>
+  </div>
+
+  <!-- Efectos decorativos -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-0 group-hover:opacity-40 transition-opacity duration-500"
+  ></div>
+  <div
+    class="absolute top-0 right-0 p-2 m-4 bg-slate-800 text-white text-xs rounded-full shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-500"
+  >
+    Próximamente
+  </div>
+</div>
+
+  {projects.map((project) => (
+    <ProjectCard {...project} />
+  ))}
+</section>
+
+

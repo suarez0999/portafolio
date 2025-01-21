@@ -1,11 +1,11 @@
 ---
-import avatarLight from "@public/image/Avatar-Light.webp";
-import avatarDark from "@public/image/Avatar-Dark.webp";
+import avatarLight from "@images/Avatar-Light.webp";
+import avatarDark from "@images/Avatar-Dark.webp";
 import { Image } from "astro:assets";
-import Button from "@ui/Button.astro";
-import LinkedInIcon from "@icons/Linkedin.astro";
-import EmailIcon from "@icons/Email.astro";
-import DownloadIcon from "@icons/Download.astro";
+import ButtonPills from "@ui/ButtonPills.astro";
+import LinkedInIcon from "@icons/LinkedinIcon.astro";
+import EmailIcon from "@icons/MailIcon.astro";
+import DownloadIcon from "@icons/DownloadIcon.astro";
 import Badge from "@ui/Badge.astro";
 ---
 
@@ -17,23 +17,23 @@ import Badge from "@ui/Badge.astro";
       <Image
         class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden"
         src={avatarLight}
-        alt="Avatar small light mode"
+        alt="Avatar en modo claro pequeño"
         loading="eager"
-        title="Avatar small light mode"
+        title="Avatar en modo claro pequeño"
       />
 
       <Image
         class="rounded-full shadow-lg size-16 block md:hidden lg:hidden hidden dark:block lg:dark:hidden"
         src={avatarDark}
-        alt="Avatar small dark mode"
+        alt="Avatar en modo oscuro pequeño"
         loading="eager"
-        title="Avatar small dark mode"
+        title="Avatar en modo oscuro pequeño"
       />
       <a
-        href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
+        href="https://www.linkedin.com/in/diego-suarez-desarrollador"
         target="_blank"
         rel="noopener"
-        aria-label="Ir al perfil de LinkedIn de Diego Suarez"
+        aria-label="Ir al perfil de LinkedIn de Diego Suárez"
         class="flex items-center transition-transform hover:scale-105"
       >
         <Badge>Disponible para trabajar</Badge>
@@ -42,7 +42,7 @@ import Badge from "@ui/Badge.astro";
     <h1
       class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-      Hey, soy Diego Suarez
+      Hey, soy Diego Suárez
     </h1>
     <p class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
       Desarrollador Full Stack apasionado por crear
@@ -56,31 +56,31 @@ import Badge from "@ui/Badge.astro";
       class="flex flex-wrap sm:justify-start gap-4 mt-8"
       aria-label="Navegación principal"
     >
-      <Button
+      <ButtonPills
         href="mailto:suarezdiego4567@gmail.com"
         rel="noopener noreferrer"
-        aria-label="Enviar un correo a Diego Suarez"
-        title="Enviar un correo a Diego Suarez"
+        aria-label="Enviar un correo a Diego Suárez"
+        title="Enviar un correo a Diego Suárez"
       >
         <EmailIcon class="w-5 h-5" /> Contáctame
-      </Button>
-      <Button
+      </ButtonPills>
+      <ButtonPills
         href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
         rel="noopener noreferrer"
-        aria-label="Ir al perfil de LinkedIn de Diego Suarez"
-        title="Ir al perfil de LinkedIn de Diego Suarez"
+        aria-label="Ir al perfil de LinkedIn de Diego Suárez"
+        title="Ir al perfil de LinkedIn de Diego Suárez"
       >
         <LinkedInIcon class="w-5 h-5" /> LinkedIn
-      </Button>
-      <Button
-        href="/Curriculum Simple Para Software.pdf"
+      </ButtonPills>
+      <ButtonPills
+        href="/docs/Curriculum Simple Para Software.pdf"
         download="CV-Diego-Suarez"
         rel="noopener noreferrer"
-        aria-label="Descargar el CV de Diego Suarez"
-        title="Descargar el CV de Diego Suarez"
+        aria-label="Descargar el CV de Diego Suárez"
+        title="Descargar el CV de Diego Suárez"
       >
         <DownloadIcon class="w-5 h-5" /> Descargar CV
-      </Button>
+      </ButtonPills>
     </nav>
   </main>
 
@@ -93,8 +93,8 @@ import Badge from "@ui/Badge.astro";
       <Image
         class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:block dark:hidden"
         src={avatarLight}
-        alt="Avatar big light mode"
-        title="Avatar big light mode"
+        alt="Avatar en modo claro grande"
+        title="Avatar en modo claro grande"
         width={600}
         height={600}
         loading="eager"
@@ -102,8 +102,8 @@ import Badge from "@ui/Badge.astro";
       <Image
         class="rounded-full shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 hidden lg:dark:block"
         src={avatarDark}
-        alt="Avatar big dark mode"
-        title="Avatar big dark mode"
+        alt="Avatar en modo oscuro grande"
+        title="Avatar en modo oscuro grande"
         width={600}
         height={600}
         loading="eager"

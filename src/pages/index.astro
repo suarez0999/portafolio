@@ -1,45 +1,62 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import SectionTitle from "../components/ui/SectionTitle.astro";
-import SectionContainer from "../components/ui/SectionContainer.astro";
-import Home from "../components/Home.astro";
-import Navbar from "../components/navbar.astro";
-import Tegnologias from "../components/tecnologias.astro";
-import ContactForm from "@components/ContactForm.astro";
-import ProjectCard from "@components/Proyects.astro";
-import ExperienceCard from "@components/experice.astro";
+import Layout from "@layouts/Layout.astro";
+import SectionTitle from "@ui/SectionTitle.astro";
+import SectionContainer from "@ui/SectionContainer.astro";
+import Home from "@components/Home.astro";
+import Navbar from "@components/Navbar.astro";
+import Skills from "@components/Skills.astro";
+import Contact from "@components/Contact.astro";
+import ProjectCard from "@components/FeaturedProjects.astro";
+import Experience from "@components/Experience.astro";
 import About from "@components/AboutMe.astro";
 import Footer from "@components/Footer.astro";
+import BriefcaseIcon from "@components/icons/BriefcaseIcon.astro";
+import BulbIcon from "@components/icons/BulbIcon.astro";
+import UserIcon from "@components/icons/UserIcon.astro";
 ---
 
 <Layout>
   <!-- <Navbar /> -->
   <Navbar />
 
+  <!-- Section Home -->
   <SectionContainer id="home" class="py-16 md:py-36">
+    <!-- Content -->
     <Home />
   </SectionContainer>
-  <SectionContainer id="experience" class="py-6 md:py-16">
-    <SectionTitle> Experiencia laboral </SectionTitle>
 
-    <ExperienceCard />
+  <!-- Section Experience -->
+  <SectionContainer id="experience" class="py-6 md:py-16">
+    <!-- Title -->
+    <SectionTitle>
+      <BriefcaseIcon class="size-8" />
+      Experiencia Laboral
+    </SectionTitle>
+    <!-- Content -->
+    <Experience />
   </SectionContainer>
+
   <SectionContainer id="projects" class="py-6 md:py-16">
-    <SectionTitle> Proyectos </SectionTitle>
+    <SectionTitle> Featured projects </SectionTitle>
+
     <ProjectCard />
   </SectionContainer>
   <SectionContainer id="skills" class="py-6 md:py-16">
-    <SectionTitle> Tecnologías  </SectionTitle>
-    <Tegnologias />
+    <SectionTitle>
+      <BulbIcon class="size-8" />
+      Tecnologías
+    </SectionTitle>
+    <Skills />
   </SectionContainer>
   <SectionContainer id="about" class="py-6 md:py-16">
-    <SectionTitle> Sobre mi </SectionTitle>
-   <About />
+    <SectionTitle>
+      <UserIcon class="size-8" />
+      Sobre mi
+    </SectionTitle>
+    <About />
   </SectionContainer>
-  <SectionContainer id="contact" class="py-6 md:py-16">
-    <SectionTitle> Contacto </SectionTitle>
-<ContactForm />
-  </SectionContainer>
+  <Contact />
+
   <!-- footer -->
-   <Footer />
+  <Footer />
 </Layout>
