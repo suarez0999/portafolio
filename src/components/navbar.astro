@@ -1,6 +1,7 @@
 ---
 import ThemeToggle from "@ui/ThemeToggle.astro";
 import LanguageToggle from "@ui/LanguageToggle.astro";
+
 ---
 
 <nav
@@ -43,7 +44,7 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
         ["home", "experience", "projects", "skills", "about", "contact"].map(
           (section) => (
             <a
-              key={section}
+              id={`nav-link-${section}`}
               href={`#${section}`}
               data-section={section}
               class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-gray-200 hover:bg-[#0b2c6f] hover:text-white transition"
