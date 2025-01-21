@@ -1,8 +1,8 @@
 ---
-import avatarLight from "@public/image/Avatar-Light.webp";
-import avatarDark from "@public/image/Avatar-Dark.webp";
+import avatarLight from "@images/Avatar-Light.webp";
+import avatarDark from "@images/Avatar-Dark.webp";
 import { Image } from "astro:assets";
-import Button from "@ui/Button.astro";
+import ButtonPills from "@ui/ButtonPills.astro";
 import LinkedInIcon from "@icons/LinkedinIcon.astro";
 import EmailIcon from "@icons/MailIcon.astro";
 import DownloadIcon from "@icons/DownloadIcon.astro";
@@ -56,31 +56,31 @@ import Badge from "@ui/Badge.astro";
       class="flex flex-wrap sm:justify-start gap-4 mt-8"
       aria-label="Navegación principal"
     >
-      <Button
-        href="mailto:suarezdiego@gmail.com"
+      <ButtonPills
+        href="mailto:suarezdiego4567@gmail.com"
         rel="noopener noreferrer"
         aria-label="Enviar un correo a Diego Suárez"
         title="Enviar un correo a Diego Suárez"
       >
         <EmailIcon class="w-5 h-5" /> Contáctame
-      </Button>
-      <Button
+      </ButtonPills>
+      <ButtonPills
         href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
         rel="noopener noreferrer"
         aria-label="Ir al perfil de LinkedIn de Diego Suárez"
         title="Ir al perfil de LinkedIn de Diego Suárez"
       >
         <LinkedInIcon class="w-5 h-5" /> LinkedIn
-      </Button>
-      <Button
-        href="/Curriculum Simple Para Software.pdf"
+      </ButtonPills>
+      <ButtonPills
+        href="/docs/Curriculum Simple Para Software.pdf"
         download="CV-Diego-Suarez"
         rel="noopener noreferrer"
         aria-label="Descargar el CV de Diego Suárez"
         title="Descargar el CV de Diego Suárez"
       >
         <DownloadIcon class="w-5 h-5" /> Descargar CV
-      </Button>
+      </ButtonPills>
     </nav>
   </main>
 

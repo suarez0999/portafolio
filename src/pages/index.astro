@@ -4,10 +4,10 @@ import SectionTitle from "@ui/SectionTitle.astro";
 import SectionContainer from "@ui/SectionContainer.astro";
 import Home from "@components/Home.astro";
 import Navbar from "@components/Navbar.astro";
-import Tegnologias from "@components/Skills.astro";
+import Skills from "@components/Skills.astro";
 import Contact from "@components/Contact.astro";
 import ProjectCard from "@components/Project.astro";
-import ExperienceCard from "@components/Experience.astro";
+import Experience from "@components/Experience.astro";
 import About from "@components/AboutMe.astro";
 import Footer from "@components/Footer.astro";
 import BriefcaseIcon from "@components/icons/BriefcaseIcon.astro";
@@ -18,27 +18,26 @@ import UserIcon from "@components/icons/UserIcon.astro";
 <Layout>
   <!-- <Navbar /> -->
   <Navbar />
+
+  <!-- Section Home -->
   <SectionContainer id="home" class="py-16 md:py-36">
+    <!-- Content -->
     <Home />
   </SectionContainer>
 
+  <!-- Section Experience -->
   <SectionContainer id="experience" class="py-6 md:py-16">
+    <!-- Title -->
     <SectionTitle>
       <BriefcaseIcon class="size-8" />
       Experiencia Laboral
     </SectionTitle>
-    <p
-      class="mb-4 text-base font-medium text-gray-700 dark:text-gray-300 leading-relaxed"
-    >
-      Descubre mi trayectoria profesional, incluyendo los roles clave que he
-      desempeñado, los proyectos en los que he contribuido y los logros que han
-      marcado mi carrera.
-    </p>
-
-    <ExperienceCard />
+    <!-- Content -->
+    <Experience />
   </SectionContainer>
+
   <SectionContainer id="projects" class="py-6 md:py-16">
-    <SectionTitle> Proyectos </SectionTitle>
+    <SectionTitle> Featured projects </SectionTitle>
 
     <ProjectCard />
   </SectionContainer>
@@ -47,7 +46,7 @@ import UserIcon from "@components/icons/UserIcon.astro";
       <BulbIcon class="size-8" />
       Tecnologías
     </SectionTitle>
-    <Tegnologias />
+    <Skills />
   </SectionContainer>
   <SectionContainer id="about" class="py-6 md:py-16">
     <SectionTitle>

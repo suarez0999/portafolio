@@ -4,8 +4,9 @@ export default {
   darkMode: "class", // o 'media' si prefieres usar la preferencia del sistema
   theme: {
     extend: {
-      color: {
-        "primary": "#0b2c6f",
+      colors: {
+        // Cambiado "color" por "colors"
+        primary: "#0b2c6f",
       },
     },
   },
