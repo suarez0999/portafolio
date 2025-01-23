@@ -47,7 +47,7 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
               id={`nav-link-${section}`}
               href={`#${section}`}
               data-section={section}
-              class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-gray-200 hover:bg-[#0b2c6f] hover:text-white transition"
+              class="nav-link px-4 py-2 text-center rounded-full text-gray-500 dark:text-gray-200 hover:bg-custom-gradient hover:text-white transition"
               aria-current="false"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -75,7 +75,7 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
     // Función para limpiar los enlaces activos
     const clearActiveLinks = () => {
       navLinks.forEach((link) => {
-        link.classList.remove("font-bold", "bg-[#0b2c6f]", "text-white");
+        link.classList.remove("font-bold", "bg-custom-gradient", "text-white");
         link.setAttribute("aria-current", "false");
       });
     };
@@ -96,7 +96,7 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
           clearActiveLinks();
           navLinks.forEach((link) => {
             if (link.dataset.section === activeSectionId) {
-              link.classList.add("font-bold", "bg-[#0b2c6f]", "text-white");
+              link.classList.add("font-bold", "bg-custom-gradient", "text-white");
               link.setAttribute("aria-current", "true");
             }
           });
@@ -115,7 +115,7 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
         }
 
         clearActiveLinks();
-        link.classList.add("font-bold", "bg-[#0b2c6f]", "text-white");
+        link.classList.add("font-bold", "bg-custom-gradient", "text-white");
         link.setAttribute("aria-current", "true");
 
         // Cerrar el menú si está abierto
