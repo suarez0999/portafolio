@@ -13,7 +13,7 @@ export default {
         primary: "#0b2c6f",
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(90deg, #0b2c6f 0%, #2196f3 120%)',
+        'custom-gradient': 'linear-gradient(90deg, #0b2c6f 0%, #2196f3 160%)',
       },
     },
   },
