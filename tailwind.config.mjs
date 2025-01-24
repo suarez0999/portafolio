@@ -5,15 +5,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        OpenSans: ["OpenSansFont", "sans-serif"],
-        Monserrat: ["MonserratFont", "sans-serif"],
+        OpenSans: ["OpenSansFont", "sans-serif", "system-ui"],
+        Monserrat: ["MonserratFont", "sans-serif", "system-ui"],
+        Poppins: ["PoppinsFont", "sans-serif", "system-ui"],
       },
       colors: {
         // Cambiado "color" por "colors"
         primary: "#0b2c6f",
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(90deg, #0b2c6f 0%, #2196f3 160%)',
+        "custom-gradient": "linear-gradient(90deg, #0b2c6f 0%, #2196f3 160%)",
       },
     },
   },

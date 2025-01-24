@@ -40,12 +40,12 @@ import Badge from "@ui/Badge.astro";
       </a>
     </section>
     <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white font-Montserrat"
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white font-Monserrat"
     >
-      Hey, soy Diego Suárez
+      Hey, Soy Diego Suarez
     </h1>
     <p
-      class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300 font-OpenSans"
+      class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300 font-Poppins"
     >
       Desarrollador Full Stack apasionado por crear
       <strong class="text-yellow-500 dark:text-yellow-200 font-semibold">
@@ -113,3 +113,31 @@ import Badge from "@ui/Badge.astro";
     </div>
   </section>
 </header>
+<style>
+  /* Animaciones */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+  .animate-slide-in {
+    animation: slide-in 1s ease-in-out;
+  }
+</style>
+
