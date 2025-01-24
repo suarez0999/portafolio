@@ -1,0 +1,27 @@
+---
+export interface TechItem {
+  name: string;
+  icon: any; // Referencia al ícono importado
+}
+
+export interface TechGridProps {
+  items: TechItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="mt-16 max-w-5xl mx-auto text-center">
+  <div class="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 auto-rows-fr">
+    {items.map((item: TechItem) => (
+      <div
+        class="group flex flex-col justify-center items-center p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
+      >
+        <item.icon class="h-12 w-12 mb-2 group-hover:text-blue-500 transition-colors duration-300" />
+        <span class="font-Poppins text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-500 transition-colors duration-300">
+          {item.name}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>

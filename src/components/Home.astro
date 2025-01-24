@@ -15,7 +15,7 @@ import Badge from "@ui/Badge.astro";
     <section class="flex gap-4 mb-4 items-center">
       <!-- Avatar pequeño visible solo en móvil/tablet según tema -->
       <Image
-        class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden"
+        class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden transition-transform duration-300 ease-in-out hover:scale-105"
         src={avatarLight}
         alt="Avatar en modo claro pequeño"
         loading="eager"
@@ -23,7 +23,7 @@ import Badge from "@ui/Badge.astro";
       />
 
       <Image
-        class="rounded-full shadow-lg size-16 block md:hidden lg:hidden hidden dark:block lg:dark:hidden"
+        class="rounded-full shadow-lg size-16 block md:hidden lg:hidden hidden dark:block lg:dark:hidden transition-transform duration-300 ease-in-out hover:scale-105"
         src={avatarDark}
         alt="Avatar en modo oscuro pequeño"
         loading="eager"
@@ -140,4 +140,3 @@ import Badge from "@ui/Badge.astro";
     animation: slide-in 1s ease-in-out;
   }
 </style>
-
