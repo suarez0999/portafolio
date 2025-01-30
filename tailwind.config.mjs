@@ -4,9 +4,19 @@ export default {
   darkMode: "class", // o 'media' si prefieres usar la preferencia del sistema
   theme: {
     extend: {
+      fontFamily: {
+        OpenSans: ["OpenSansFont", "sans-serif", "system-ui"],
+        Monserrat: ["MonserratFont", "sans-serif", "system-ui"],
+        Marykate: ["MarykateFont", "sans-serif", "system-ui"],
+        Poppins: ["PoppinsFont", "sans-serif", "system-ui"],
+      },
       colors: {
         // Cambiado "color" por "colors"
         primary: "#0b2c6f",
+      },
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(90deg, #0b2c6f 0%, #2196f3 160%)",
+        light: "linear-gradient(135deg, #ffffff, #f5f5f5, #d6d6d6, #aaaaaa)",
       },
     },
   },
