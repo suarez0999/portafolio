@@ -1,7 +1,6 @@
 <div style=" background: white; padding: 2px; border-radius: 12px; ">
   <img src="https://res.cloudinary.com/dmfzbjgr3/image/upload/v1738205837/l8r5hpcgoognyepfp95w.png" alt="Logo"> 
 </div>
-
 </br>
 </br>
 
