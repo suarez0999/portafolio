@@ -1,7 +1,6 @@
 ---
 import ThemeToggle from "@ui/ThemeToggle.astro";
 import LanguageToggle from "@ui/LanguageToggle.astro";
-
 ---
 
 <nav
@@ -60,7 +59,7 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
     <!-- Botones de acciones -->
     <div class="flex items-center space-x-4 ml-4">
       <ThemeToggle />
-      
+
       <!-- <LanguageToggle /> -->
     </div>
   </div>
@@ -97,7 +96,11 @@ import LanguageToggle from "@ui/LanguageToggle.astro";
           clearActiveLinks();
           navLinks.forEach((link) => {
             if (link.dataset.section === activeSectionId) {
-              link.classList.add("font-bold", "bg-custom-gradient", "text-white");
+              link.classList.add(
+                "font-bold",
+                "bg-custom-gradient",
+                "text-white"
+              );
               link.setAttribute("aria-current", "true");
             }
           });

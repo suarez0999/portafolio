@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         OpenSans: ["OpenSansFont", "sans-serif", "system-ui"],
         Monserrat: ["MonserratFont", "sans-serif", "system-ui"],
+        Marykate: ["MarykateFont", "sans-serif", "system-ui"],
         Poppins: ["PoppinsFont", "sans-serif", "system-ui"],
       },
       colors: {
@@ -15,8 +16,7 @@ export default {
       },
       backgroundImage: {
         "custom-gradient": "linear-gradient(90deg, #0b2c6f 0%, #2196f3 160%)",
-        "light": "linear-gradient(135deg, #ffffff, #f5f5f5, #d6d6d6, #aaaaaa)",
-
+        light: "linear-gradient(135deg, #ffffff, #f5f5f5, #d6d6d6, #aaaaaa)",
       },
     },
   },
