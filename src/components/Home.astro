@@ -7,10 +7,6 @@ import LinkedInIcon from "@icons/LinkedinIcon.astro";
 import EmailIcon from "@icons/MailIcon.astro";
 import DownloadIcon from "@icons/DownloadIcon.astro";
 import Badge from "@ui/Badge.astro";
-
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
-const lang = getLangFromUrl(Astro.url); // Idioma de la URL
-const t = useTranslations(lang); // Función de traducción
 ---
 
 <header class="flex flex-col sm:flex-row gap-8 p-6 sm:p-12" role="banner">
@@ -19,7 +15,7 @@ const t = useTranslations(lang); // Función de traducción
     <section class="flex gap-4 mb-4 items-center">
       <!-- Avatar pequeño visible solo en móvil/tablet según tema -->
       <Image
-        class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden transition-transform duration-300 ease-in-out hover:scale-105"
+        class="rounded-full shadow-lg size-16 block md:block lg:hidden dark:hidden"
         src={avatarLight}
         alt="Avatar en modo claro pequeño"
         loading="eager"
@@ -27,7 +23,7 @@ const t = useTranslations(lang); // Función de traducción
       />
 
       <Image
-        class="rounded-full shadow-lg size-16 block md:hidden lg:hidden hidden dark:block lg:dark:hidden transition-transform duration-300 ease-in-out hover:scale-105"
+        class="rounded-full shadow-lg size-16 block md:hidden lg:hidden hidden dark:block lg:dark:hidden"
         src={avatarDark}
         alt="Avatar en modo oscuro pequeño"
         loading="eager"
@@ -40,22 +36,20 @@ const t = useTranslations(lang); // Función de traducción
         aria-label="Ir al perfil de LinkedIn de Diego Suárez"
         class="flex items-center transition-transform hover:scale-105"
       >
-        <Badge> {t("home.work")} </Badge>
+        <Badge>Disponible para trabajar</Badge>
       </a>
     </section>
     <h1
-      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white font-Monserrat"
+      class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
     >
-      {t("home.title")}
+      Hey, soy Diego Suárez
     </h1>
-    <p
-      class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300 font-Poppins"
-    >
-      {t("home.content.one")}
-      <span class="text-yellow-500 dark:text-yellow-200 font-semibold">
-        {t("home.content.two")}
-      </span>
-      {t("home.content.three")}
+    <p class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+      Desarrollador Full Stack apasionado por crear
+      <strong class="text-yellow-500 dark:text-yellow-200 font-semibold">
+        experiencias digitales
+      </strong>
+      excepcionales. Especializado en tecnologías modernas y soluciones escalables.
     </p>
     <!-- Botones de navegación -->
     <nav
@@ -68,11 +62,10 @@ const t = useTranslations(lang); // Función de traducción
         aria-label="Enviar un correo a Diego Suárez"
         title="Enviar un correo a Diego Suárez"
       >
-        <EmailIcon class="w-5 h-5" />
-        {t("home.contact")}
+        <EmailIcon class="w-5 h-5" /> Contáctame
       </ButtonPills>
       <ButtonPills
-        href="https://www.linkedin.com/in/diego-suarez-desarrollador"
+        href="https://www.linkedin.com/in/diego-suarez-desarrollador/"
         rel="noopener noreferrer"
         aria-label="Ir al perfil de LinkedIn de Diego Suárez"
         title="Ir al perfil de LinkedIn de Diego Suárez"
@@ -86,8 +79,7 @@ const t = useTranslations(lang); // Función de traducción
         aria-label="Descargar el CV de Diego Suárez"
         title="Descargar el CV de Diego Suárez"
       >
-        <DownloadIcon class="w-5 h-5" />
-        {t("home.download")}
+        <DownloadIcon class="w-5 h-5" /> Descargar CV
       </ButtonPills>
     </nav>
   </main>
@@ -119,6 +111,7 @@ const t = useTranslations(lang); // Función de traducción
     </div>
   </section>
 </header>
+
 <style>
   /* Animaciones */
   @keyframes fade-in {

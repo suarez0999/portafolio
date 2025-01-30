@@ -4,67 +4,183 @@
 </br>
 </br>
 
-# Portfolio Project
+# 🚀 Portfolio - Diego Suárez
 
-Este proyecto es un portafolio personal diseñado para mostrar mis habilidades, proyectos y experiencia profesional. El objetivo principal es proporcionar una plataforma donde los empleadores potenciales y colaboradores puedan conocer más sobre mi trabajo.
+Bienvenido a mi portafolio personal. Aquí podrás encontrar información sobre mis **habilidades**, **proyectos** y **experiencia profesional**.
 
-## Herramientas Utilizadas
+✨ **Objetivo:**  
+Este portafolio está diseñado para servir como una vitrina de mi trabajo, permitiendo que **empleadores potenciales** y **colaboradores** conozcan más sobre mis proyectos y capacidades.
 
-- **HTML5**: Para la estructura del contenido del sitio web.
-- **CSS3**: Para el diseño y la presentación visual del sitio.
-- **JavaScript**: Para la interactividad y funcionalidades dinámicas.
-- **Bootstrap**: Para un diseño responsivo y componentes pre-diseñados.
-- **jQuery**: Para simplificar la manipulación del DOM y manejar eventos.
-- **PHP**: Para la lógica del servidor y la gestión de formularios de contacto.
-- **MySQL**: Para la gestión de la base de datos y almacenamiento de información.
-- **Git**: Para el control de versiones y la colaboración en el desarrollo.
-- **Laragon**: Como entorno de desarrollo local para facilitar la configuración y pruebas.
+🔗 ¡Explora y descubre lo que hago! </br>
+🚀 [Ver Demo](https://porfolio-diego-suarez.netlify.app/)
 
-## Estructura del Proyecto
 
-- **index.html**: Página principal del portafolio.
-- **about.html**: Página con información sobre mí.
-- **projects.html**: Página que muestra mis proyectos destacados.
-- **contact.html**: Página con un formulario de contacto.
-- **assets/**: Carpeta que contiene imágenes, estilos y scripts.
+## ✨ Funcionalidades
 
-## Instalación y Uso
+- 📌 Diseño responsivo y moderno.
+- ⚡ Carga rápida optimizada.
+- 🎨 Dark Mode integrado.
+- 🖥️ Proyectos destacados con detalles interactivos.
 
-1. Clona el repositorio en tu máquina local:
-   ```bash
-   git clone https://github.com/tu-usuario/portfolio.git
-   ```
-2. Navega al directorio del proyecto:
-   ```bash
-   cd portfolio
-   ```
-3. Abre el proyecto en tu navegador preferido o utiliza un servidor local como Laragon para visualizarlo.
+## 🛠️ Herramientas Utilizadas
 
-## Contribuciones
+<div align="left">
 
-Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
+<strong>TypeScript</strong> - Superset de JavaScript que añade tipado estático y mejoras para desarrollo a gran escala.
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu característica o corrección de errores:
-   ```bash
-   git checkout -b feature/nueva-caracteristica
-   ```
-3. Realiza tus cambios y haz commit:
-   ```bash
-   git commit -m "Agrega nueva característica"
-   ```
-4. Envía tus cambios al repositorio remoto:
-   ```bash
-   git push origin feature/nueva-caracteristica
-   ```
-5. Abre un Pull Request en GitHub.
+</div>
 
-## Licencia
+<div align="left">
+ 
+  <strong>Tailwind CSS</strong> - Framework de CSS utilitario para crear diseños modernos y responsivos con clases predefinidas.
+</div>
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+<div align="left">
 
-## Contacto
+<strong>Astro</strong> - Framework moderno para construir sitios web rápidos optimizando la entrega de contenido estático.
 
-Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de mi [correo electrónico](mailto:tu-email@example.com).
+</div>
 
-¡Gracias por visitar mi portafolio!
+## 📂 Estructura del Proyecto
+
+```
+Directory structure:
+└── suarez0999-portafolio/
+    ├── README.md
+    ├── astro.config.mjs
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── tailwind.config.mjs
+    ├── tsconfig.json
+    ├── public/
+    │   ├── docs/
+    │   └── images/
+    │       ├── Avatar-Dark.webp
+    │       ├── Avatar-Light.webp
+    │       ├── Logo-Coopidrogas.webp
+    │       └── Portada.webp
+    └── src/
+        ├── assets/
+        ├── components/
+        │   ├── AboutMe.astro
+        │   ├── Contact.astro
+        │   ├── ContactForm.astro
+        │   ├── Experience.astro
+        │   ├── FeaturedProjects.astro
+        │   ├── Footer.astro
+        │   ├── Home.astro
+        │   ├── Project.astro
+        │   ├── Skills.astro
+        │   ├── navbar.astro
+        │   ├── icons/
+        │   │   ├── ArrowRight.astro
+        │   │   ├── AstroIcon.astro
+        │   │   ├── BriefcaseIcon.astro
+        │   │   ├── BulbIcon.astro
+        │   │   ├── DockerIcon.astro
+        │   │   ├── DownloadIcon.astro
+        │   │   ├── FigmaIcon.astro
+        │   │   ├── GitIcon.astro
+        │   │   ├── HeartHandshakeIcon.astro
+        │   │   ├── JavaScripIcon.astro
+        │   │   ├── LanguageIcon.astro
+        │   │   ├── LinkedinIcon.astro
+        │   │   ├── MailIcon.astro
+        │   │   ├── MapPinIcon.astro
+        │   │   ├── MongoDBIcon.astro
+        │   │   ├── MoonIcon.astro
+        │   │   ├── MySQLIcon.astro
+        │   │   ├── NodejsIcon.astro
+        │   │   ├── PhoneIcon.astro
+        │   │   ├── PhpIcon.astro
+        │   │   ├── ReactIcon.astro
+        │   │   ├── Scale.astro
+        │   │   ├── SunIcon.astro
+        │   │   ├── SystemIcon.astro
+        │   │   ├── TailwindCSSIcon.astro
+        │   │   ├── TypeScripIcon.astro
+        │   │   ├── UserCircleIcon.astro
+        │   │   ├── UserIcon.astro
+        │   │   ├── UsersGroupIcon.astro
+        │   │   └── WorldwwwIcon.astro
+        │   └── ui/
+        │       ├── Badge.astro
+        │       ├── ButtonPills.astro
+        │       ├── ContactInfo.astro
+        │       ├── LanguageToggle.astro
+        │       ├── Popover.astro
+        │       ├── ProjectCard.astro
+        │       ├── SectionContainer.astro
+        │       ├── SectionTitle.astro
+        │       ├── ThemeToggle.astro
+        │       └── TimeLine.astro
+        ├── layouts/
+        │   └── Layout.astro
+        └── pages/
+            ├── contact.astro
+            ├── index.astro
+            └── projects.astro
+
+```
+
+## ⚙️ Instalación y Uso
+
+Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:
+
+### 📥 1. Clonar el repositorio
+
+Ejecuta el siguiente comando en tu terminal:
+
+```bash
+git clone https://github.com/suarez0999/portafolio.git
+```
+
+### 📂 2. Acceder al directorio del proyecto
+
+```bash
+cd portfolio
+```
+
+### 🚀 3. Ejecutar el proyecto
+
+- Abre el archivo en tu navegador preferido. 🌍
+- O utiliza un servidor local como Laragon, Live Server o similar para visualizarlo. 🚀
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! 🚀 Si deseas ayudar a mejorar este proyecto, sigue estos pasos:
+
+1️⃣ **Haz un fork** del repositorio. 🍴  
+2️⃣ **Crea una nueva rama** para tu mejora o corrección de errores:
+
+```bash
+git checkout -b feature/nueva-caracteristica
+```
+
+3️⃣ **Realiza tus cambios** y guarda tu progreso con un commit:
+
+```bash
+git commit -m "✨ Agrega nueva característica"
+```
+
+4️⃣ **Envía los cambios** al repositorio remoto:
+
+```bash
+git push origin feature/nueva-caracteristica
+```
+
+5️⃣ **Abre un Pull Request** en GitHub y estaré encantado de revisarlo. 💡🔍
+
+¡Gracias por tu apoyo y por ayudar a mejorar este proyecto! 💙
+
+## 📜 Licencia
+
+Este proyecto está licenciado bajo la **Licencia MIT**. 📄  
+Consulta el archivo [`LICENSE`](./LICENSE) para más detalles.
+
+## 📩 Contacto
+
+Si quieres colaborar o simplemente conectar, ¡no dudes en escribirme! 😊  
+🔗 [LinkedIn](https://www.linkedin.com/in/diego-suarez-desarrollador) | 📧 [Email](mailto:suarezdiego4567@gmail.com)
+
+💙 ¡Gracias por visitar mi portafolio! Espero que te haya gustado. 🚀
