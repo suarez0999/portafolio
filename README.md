@@ -1,3 +1,10 @@
+<div style=" background: white; padding: 2px; border-radius: 12px; ">
+  <img src="https://res.cloudinary.com/dmfzbjgr3/image/upload/v1738205837/l8r5hpcgoognyepfp95w.png" alt="Logo"> 
+</div>
+
+</br>
+</br>
+
 # Portfolio Project
 
 Este proyecto es un portafolio personal diseñado para mostrar mis habilidades, proyectos y experiencia profesional. El objetivo principal es proporcionar una plataforma donde los empleadores potenciales y colaboradores puedan conocer más sobre mi trabajo.
@@ -25,13 +32,13 @@ Este proyecto es un portafolio personal diseñado para mostrar mis habilidades, 
 ## Instalación y Uso
 
 1. Clona el repositorio en tu máquina local:
-    ```bash
-    git clone https://github.com/tu-usuario/portfolio.git
-    ```
+   ```bash
+   git clone https://github.com/tu-usuario/portfolio.git
+   ```
 2. Navega al directorio del proyecto:
-    ```bash
-    cd portfolio
-    ```
+   ```bash
+   cd portfolio
+   ```
 3. Abre el proyecto en tu navegador preferido o utiliza un servidor local como Laragon para visualizarlo.
 
 ## Contribuciones
@@ -40,17 +47,17 @@ Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos 
 
 1. Haz un fork del repositorio.
 2. Crea una nueva rama para tu característica o corrección de errores:
-    ```bash
-    git checkout -b feature/nueva-caracteristica
-    ```
+   ```bash
+   git checkout -b feature/nueva-caracteristica
+   ```
 3. Realiza tus cambios y haz commit:
-    ```bash
-    git commit -m "Agrega nueva característica"
-    ```
+   ```bash
+   git commit -m "Agrega nueva característica"
+   ```
 4. Envía tus cambios al repositorio remoto:
-    ```bash
-    git push origin feature/nueva-caracteristica
-    ```
+   ```bash
+   git push origin feature/nueva-caracteristica
+   ```
 5. Abre un Pull Request en GitHub.
 
 ## Licencia
