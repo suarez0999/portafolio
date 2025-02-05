@@ -2,8 +2,7 @@
 // Importa el componente
 import ProjectCard from "@ui/ProjectCard.astro";
 import GitIcon from "@icons/GitIcon.astro";
-import ArrowRight from "@icons/ArrowRight.astro";
-
+import NavbarPage from "@components/NavbarPage.astro";
 // Datos de ejemplo
 const projects = [
   {
@@ -64,7 +63,7 @@ const projects = [
   },
 ];
 ---
-
+<NavbarPage />
 <section
   class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center items-start"
   aria-labelledby="projects-section"
