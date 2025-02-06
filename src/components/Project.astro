@@ -1,67 +1,10 @@
 ---
 // Importa el componente
 import ProjectCard from "@ui/ProjectCard.astro";
-import GitIcon from "@icons/GitIcon.astro";
 import NavbarPage from "@components/NavbarPage.astro";
 // Datos de ejemplo
-const projects = [
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-];
+import {projects} from "../data/p.astro"
+
 ---
 <NavbarPage />
 <section
