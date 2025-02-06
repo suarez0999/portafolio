@@ -1,6 +1,6 @@
 ---
 import NavbarComponent from "@ui/NabvarComponent.astro";
-import MailIcon from "@icons/MailIcon.astro";
+import HomeIcon from "@icons/HomeIcon.astro";
 
 interface Link {
   href: string;
@@ -8,7 +8,7 @@ interface Link {
   icon?: any;
 }
 
-const links: Link[] = [{ href: "/#home", label: "Home", icon: MailIcon }];
+const links: Link[] = [{ href: "/", label: "Inicio", icon: HomeIcon }];
 ---
 
 <NavbarComponent>

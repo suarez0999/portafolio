@@ -12,6 +12,7 @@ import BriefcaseIcon from "@components/icons/BriefcaseIcon.astro";
 import BulbIcon from "@components/icons/BulbIcon.astro";
 import UserIcon from "@components/icons/UserIcon.astro";
 import Navbar from "@components/Navbar.astro";
+import VscodeIcon from "@components/icons/VscodeIcon.astro";
 ---
 
 <Layout>
@@ -34,14 +35,17 @@ import Navbar from "@components/Navbar.astro";
   </SectionContainer>
 
   <SectionContainer id="projects" class="py-6 md:py-16">
-    <SectionTitle> Featured projects </SectionTitle>
+    <SectionTitle>
+      <VscodeIcon class="size-8" />
+      Proyectos destacados
+    </SectionTitle>
 
     <ProjectCard />
   </SectionContainer>
   <SectionContainer id="skills" class="py-6 md:py-16">
     <SectionTitle>
       <BulbIcon class="size-8" />
-      Tecnologías
+      Habilidades
     </SectionTitle>
     <Skills />
   </SectionContainer>
