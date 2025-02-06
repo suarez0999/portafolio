@@ -20,13 +20,12 @@ const {
   demoLink,
 } = Astro.props;
 
-import GitIcon from "@icons/GitIcon.astro";
+import GitHubIcon from "@icons/GitHubIcon.astro";
 import WorldwwwIcon from "@icons/WorldwwwIcon.astro";
-import { Image } from "astro:assets";
 ---
 
 <div
-  class="relative flex flex-col my-6 bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 rounded-lg w-96 hover:shadow-lg transition-shadow"
+  class="flex flex-col bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 rounded-lg w-96 hover:shadow-lg transition-shadow"
   role="article"
   aria-labelledby="project-title"
 >
@@ -75,7 +74,7 @@ import { Image } from "astro:assets";
       target="_blank"
       rel="noopener noreferrer"
     >
-      <GitIcon class="h-5 w-5 mr-2" />
+      <GitHubIcon class="h-5 w-5 mr-2" />
       GitHub
     </a>
     <a

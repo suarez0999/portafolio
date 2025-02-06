@@ -5,15 +5,16 @@ import LocationIcon from "@icons/MapPinIcon.astro";
 import ContactInfo from "@ui/ContactInfo.astro";
 ---
 
-<div class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen flex items-center justify-center">
+<div class="min-h-screen flex items-center justify-center">
   <div class="max-w-4xl w-full mx-4">
     <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
       <div class="md:flex">
         <!-- Formulario -->
         <section class="p-8 md:w-2/3">
-          <h2 class="text-2xl font-bold mb-6">Contáctanos</h2>
+          <h2 class="text-2xl font-bold mb-6 font-Monserrat">Contáctanos</h2>
           <p class="mb-4 text-gray-600 dark:text-gray-400">
-            Si tienes alguna pregunta o comentario, por favor llena el formulario a continuación.
+            Si tienes alguna pregunta o comentario, por favor llena el
+            formulario a continuación.
           </p>
           <form>
             <!-- Agrupación de campos -->
@@ -21,7 +22,9 @@ import ContactInfo from "@ui/ContactInfo.astro";
               <legend class="sr-only">Información personal</legend>
               <!-- Nombre -->
               <div class="mb-4">
-                <label for="nombre" class="block text-sm font-medium mb-1">Nombre</label>
+                <label for="nombre" class="block text-sm font-medium mb-1"
+                  >Nombre</label
+                >
                 <input
                   id="nombre"
                   type="text"
@@ -29,9 +32,11 @@ import ContactInfo from "@ui/ContactInfo.astro";
                   placeholder="Ingresa tu nombre"
                 />
               </div>
-               <!-- correo electrónico -->
-               <div class="mb-4">
-                <label for="email" class="block text-sm font-medium mb-1">correo electrónico</label>
+              <!-- correo electrónico -->
+              <div class="mb-4">
+                <label for="email" class="block text-sm font-medium mb-1"
+                  >correo electrónico</label
+                >
                 <input
                   id="email"
                   type="email"
@@ -41,20 +46,24 @@ import ContactInfo from "@ui/ContactInfo.astro";
               </div>
               <!-- Teléfono -->
               <div class="mb-4">
-                <label for="telefono" class="block text-sm font-medium mb-1">Número de teléfono</label>
+                <label for="telefono" class="block text-sm font-medium mb-1"
+                  >Número de teléfono</label
+                >
                 <input
                   id="telefono"
                   type="tel"
                   class="input-field"
                   placeholder="(+57) 123-4567"
                 />
-              </div>      
+              </div>
             </fieldset>
             <!-- Mensaje -->
             <fieldset>
               <legend class="sr-only">Tu mensaje</legend>
               <div class="mb-4">
-                <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+                <label for="mensaje" class="block text-sm font-medium mb-1"
+                  >Mensaje</label
+                >
                 <textarea
                   id="mensaje"
                   rows="4"
@@ -75,12 +84,12 @@ import ContactInfo from "@ui/ContactInfo.astro";
         </section>
 
         <!-- Información de contacto -->
-        <section class="p-8 md:w-1/3 bg-[#03346E] dark:bg-[#03346E] text-white">
-          <h2 class="text-xl font-bold mb-4">Información de Contacto</h2>
+        <section class="p-8 bg-[#03346E] dark:bg-[#03346E] text-white">
+          <h2 class="text-xl font-bold mb-4 font-Monserrat">Información de Contacto</h2>
           <address class="space-y-4 not-italic">
-            <ContactInfo Icon={PhoneIcon} text="+57 300 123 4567" />
-            <ContactInfo Icon={EmailIcon} text="contacto@ejemplo.com" />
-            <ContactInfo Icon={LocationIcon} text="Calle 123 #45-67, Bogotá" />
+            <ContactInfo Icon={PhoneIcon} text="+57 322 450 3815" />
+            <ContactInfo Icon={EmailIcon} text="suarezdiego4567@gmail.com" />
+            <ContactInfo Icon={LocationIcon} text="Bogotá, Colombia" />
           </address>
         </section>
       </div>

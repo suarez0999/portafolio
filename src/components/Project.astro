@@ -1,73 +1,15 @@
 ---
 // Importa el componente
 import ProjectCard from "@ui/ProjectCard.astro";
-import GitIcon from "@icons/GitIcon.astro";
-import ArrowRight from "@icons/ArrowRight.astro";
-
+import NavbarPage from "@components/NavbarPage.astro";
 // Datos de ejemplo
-const projects = [
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-  {
-    imageUrl: "/images/Portada.webp",
-    imageAlt: "Vista previa del proyecto 1",
-    title: "Proyecto 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor non error neque expedita ab adipisci est tempore quibusdam.",
-    skills: [
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-      { name: "Git", icon: GitIcon }, // Pasa el componente GitIcon
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://example.com",
-  },
-];
----
+import {projects} from "../data/projects.astro"
 
+---
+<NavbarPage />
 <section
-  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center items-start"
-  aria-labelledby="projects-section"
+class="flex flex-wrap justify-center items-center gap-3"
+aria-labelledby="projects-section"
 >
 <div
   class="relative flex flex-col items-center justify-center my-6 bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 rounded-lg w-96 h-[520px] overflow-hidden hover:shadow-lg transition-shadow duration-500 group "
@@ -78,7 +20,7 @@ const projects = [
    
   <div class="absolute inset-0">
     <img
-      src="/images/Avatar-Light.webp"
+      src="/200w.gif"
       alt="Más proyectos próximamente"
       class="h-full w-full object-cover opacity-50 group-hover:opacity-30 transition-opacity duration-500"
     />

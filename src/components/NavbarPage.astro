@@ -1,5 +1,6 @@
 ---
 import NavbarComponent from "@ui/NabvarComponent.astro";
+import HomeIcon from "@icons/HomeIcon.astro";
 
 interface Link {
   href: string;
@@ -7,15 +8,9 @@ interface Link {
   icon?: any;
 }
 
-const links: Link[] = [
-  { href: "#home", label: "Inicio" },
-  { href: "#experience", label: "Experiencia" },
-  { href: "#projects", label: "Proyectos" },
-  { href: "#skills", label: "Habilidades" },
-  { href: "#about", label: "Sobre mí" },
-  { href: "#contact", label: "Contactame" },
-];
+const links: Link[] = [{ href: "/", label: "Inicio", icon: HomeIcon }];
 ---
+
 <NavbarComponent>
   {
     links.map(({ href, label, icon: Icon }) => (

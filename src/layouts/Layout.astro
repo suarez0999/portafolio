@@ -1,3 +1,7 @@
+---
+import Footer from "@components/Footer.astro";
+---
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -74,6 +78,8 @@
 
   <body>
     <slot />
+    <!-- footer -->
+    <Footer />
   </body>
 </html>
 
@@ -82,7 +88,7 @@
   * {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "PoppinsFont", sans-serif;
     box-sizing: border-box;
   }
 

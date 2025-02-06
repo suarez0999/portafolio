@@ -38,12 +38,10 @@ const projects = [
 ---
 
 <section
-  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 justify-center items-start"
+  class="flex flex-wrap justify-center items-center gap-3"
   aria-labelledby="projects-section"
 >
-  {projects.map((project) => (
-    <ProjectCard {...project} />
-  ))}
+  {projects.map((project) => <ProjectCard {...project} />)}
 </section>
 
 <section class="flex justify-center mt-6">
@@ -64,4 +62,3 @@ const projects = [
     />
   </a>
 </section>
-
