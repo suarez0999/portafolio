@@ -60,7 +60,6 @@ Directory structure:
     │       ├── Logo-Coopidrogas.webp
     │       └── Portada.webp
     └── src/
-        ├── assets/
         ├── components/
         │   ├── AboutMe.astro
         │   ├── Contact.astro
@@ -69,9 +68,10 @@ Directory structure:
         │   ├── FeaturedProjects.astro
         │   ├── Footer.astro
         │   ├── Home.astro
+        │   ├── NavbarPage.astro
         │   ├── Project.astro
         │   ├── Skills.astro
-        │   ├── navbar.astro
+        │   ├── NavbarGeneral.astro
         │   ├── icons/
         │   │   ├── ArrowRight.astro
         │   │   ├── AstroIcon.astro
@@ -80,8 +80,10 @@ Directory structure:
         │   │   ├── DockerIcon.astro
         │   │   ├── DownloadIcon.astro
         │   │   ├── FigmaIcon.astro
+        │   │   ├── GitHubIcon.astro
         │   │   ├── GitIcon.astro
         │   │   ├── HeartHandshakeIcon.astro
+        │   │   ├── HomeIcon.astro
         │   │   ├── JavaScripIcon.astro
         │   │   ├── LanguageIcon.astro
         │   │   ├── LinkedinIcon.astro
@@ -102,25 +104,35 @@ Directory structure:
         │   │   ├── UserCircleIcon.astro
         │   │   ├── UserIcon.astro
         │   │   ├── UsersGroupIcon.astro
+        │   │   ├── VscodeIcon.astro
         │   │   └── WorldwwwIcon.astro
         │   └── ui/
         │       ├── Badge.astro
         │       ├── ButtonPills.astro
+        │       ├── CardsSkills.astro
         │       ├── ContactInfo.astro
         │       ├── LanguageToggle.astro
+        │       ├── NabvarComponent.astro
         │       ├── Popover.astro
         │       ├── ProjectCard.astro
         │       ├── SectionContainer.astro
         │       ├── SectionTitle.astro
         │       ├── ThemeToggle.astro
-        │       └── TimeLine.astro
+        │       ├── TimeLine.astro
+        │       └── logoVertical.astro
+        ├── data/
+        │   └── projects.astro
+        ├── fonts/
+        │   ├── FontsFree-Net-Marykate-Regular.ttf
+        │   ├── Montserrat-Regular.ttf
+        │   ├── OpenSans_Condensed-Regular.ttf
+        │   └── Poppins-Regular.ttf
         ├── layouts/
         │   └── Layout.astro
         └── pages/
             ├── contact.astro
             ├── index.astro
             └── projects.astro
-
 ```
 
 ## ⚙️ Instalación y Uso
