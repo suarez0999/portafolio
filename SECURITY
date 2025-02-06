@@ -1,0 +1,65 @@
+# 🔒 Política de Seguridad
+
+## 📅 Versiones Soportadas
+
+Este es un **proyecto de portafolio personal** desarrollado con [Astro](https://astro.build/).  
+Las actualizaciones de seguridad se aplicarán **según sea necesario**, y las dependencias se actualizarán periódicamente para garantizar los últimos parches de seguridad.
+
+| Versión | Soporte | Notas |
+|---------|----------|--------|
+| 1.x.x   | ✅ Activo | Mantenido y actualizado regularmente |
+| 0.x.x   | ❌ Sin soporte | Versiones obsoletas |
+
+---
+
+## 🛡️ Reportar una Vulnerabilidad
+
+Si encuentras una **vulnerabilidad de seguridad** en este proyecto, sigue estos pasos:
+
+1. **No abras un issue público.**  
+   - En su lugar, **contáctame directamente** por correo: `suarezdieog4567@gmail.com`.  
+   - También puedes enviar un **mensaje privado** a través de [GitHub](https://github.com/suarez0999).  
+
+2. Proporciona la mayor cantidad de detalles posible:  
+   - Pasos para reproducir el problema.  
+   - Impacto o riesgos potenciales.  
+   - Sugerencias de solución (si es posible).  
+
+3. Me comprometo a **revisar y responder** en un plazo de **48 horas**.  
+
+---
+
+## 🔐 Buenas Prácticas de Seguridad
+
+Este proyecto sigue prácticas básicas de **seguridad**, incluyendo:
+
+✅ **No se almacenan datos sensibles** en el repositorio (ej. claves API, variables de entorno).  
+✅ **Las dependencias se actualizan** regularmente para prevenir vulnerabilidades.  
+✅ **Se implementan Políticas de Seguridad de Contenido (CSP)** para prevenir ataques web comunes.  
+✅ **Los formularios y entradas de usuario** (si los hay) están sanitizados para evitar ataques XSS o inyecciones.  
+
+---
+
+## 🛠️ Dependencias y Actualizaciones de Seguridad
+
+- Este proyecto utiliza **Astro**, **Tailwind CSS** y otras herramientas frontend.  
+- Todas las dependencias se gestionan en `package.json` y se mantienen actualizadas con los siguientes comandos:  
+
+```sh
+npm audit fix
+npm update
+```
+
+- Se monitorean posibles vulnerabilidades con [GitHub Dependabot](https://github.com/dependabot).
+
+---
+
+## 🔗 Recursos de Seguridad Recomendados
+
+- [Prácticas de Seguridad OWASP](https://owasp.org/)
+- [Guía de Seguridad de Astro](https://docs.astro.build/en/guides/security/)
+- [Mejores Prácticas de Seguridad en Node.js](https://nodejs.org/en/docs/guides/security/)
+
+---
+
+**📩 Contacto:** Si tienes alguna preocupación o sugerencia sobre seguridad, no dudes en comunicarte.

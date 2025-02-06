@@ -1,7 +1,10 @@
 {
-  "name": "porfolio",
+  "name": "porfolio-diego-suarez",
+  "description": "Un proyecto web con Astro de mi informacion y proyectos.",
   "type": "module",
   "version": "0.0.1",
+  "author": "Diego Suarez",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
