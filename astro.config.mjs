@@ -8,6 +8,7 @@ export default defineConfig({
     resolve: {
       alias: {
         "@components": "/src/components",
+        "@branding": "/src/components/branding",
         "@ui": "/src/components/ui",
         "@icons": "/src/components/icons",
         "@images": "/public/images",
