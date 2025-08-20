@@ -14,7 +14,6 @@ export default defineConfig({
         "@images": "/public/images",
         "@layouts": "/src/layouts",
         "@pages": "/src/pages",
-        "@fonts": "/src/fonts",
       },
     },
   },
