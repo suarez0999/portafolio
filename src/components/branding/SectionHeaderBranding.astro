@@ -1,0 +1,42 @@
+---
+import SectionBranding from "@components/ui/SectionBranding.astro";
+import ArrowScroll from "@components/icons/ArrowScroll.astro";
+---
+
+<!-- Sección Encabezado -->
+<SectionBranding
+  id="header"
+  class="relative flex items-center justify-center min-h-screen px-6 md:px-12 lg:px-20 bg-white dark:bg-gray-900"
+>
+  <header class="flex flex-col items-center text-center w-full max-w-4xl">
+    <!-- Logo -->
+    <img
+      src="/Recurso21.svg"
+      alt="Logotipo oficial de la marca Diego Suarez"
+      class="w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 mb-8 transition-transform duration-300 hover:scale-105"
+    />
+
+    <!-- Título principal -->
+    <h1
+      class="text-[clamp(1.75rem,5vw,3rem)] font-extrabold tracking-tight text-gray-900 dark:text-white mb-6"
+    >
+      Manual de Identidad de la Marca
+    </h1>
+
+    <!-- Subtítulo / texto descriptivo -->
+    <p
+      class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+    >
+      Guía oficial para mantener la coherencia visual y conceptual de la marca
+      en todos los medios.
+    </p>
+  </header>
+
+  <!-- Flecha scroll -->
+  <div class="absolute bottom-6 animate-bounce">
+    <ArrowScroll
+      class="w-6 h-6 md:w-8 md:h-8 text-gray-700 dark:text-gray-200"
+      aria-hidden="true"
+    />
+  </div>
+</SectionBranding>
