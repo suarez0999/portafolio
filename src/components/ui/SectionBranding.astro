@@ -1,11 +1,26 @@
 ---
-const { class: className, id } = Astro.props;
+interface Props {
+  id?: string;
+  class?: string;
+  as?: keyof HTMLElementTagNameMap; // permite cambiar <section> por <header>, <footer>, etc.
+  fullHeight?: boolean; // opcional para min-h-screen
+  ariaLabel?: string;
+}
+
+const {
+  id,
+  class: className = "",
+  as: Tag = "section",
+  fullHeight = false,
+  ariaLabel
+} = Astro.props;
 ---
 
-<section
-    id={id}
-    data-section={id}
-    class={`${className} min-h-screen flex flex-col px-10 md:px-20 py-16 bg-white dark:bg-gray-900 rounded-lg`}
+<Tag
+  id={id}
+  data-section={id}
+  aria-label={ariaLabel}
+  class={`${className} ${fullHeight ? "min-h-screen" : ""} flex flex-col px-6 md:px-10 lg:px-20 py-12 bg-white dark:bg-gray-900 rounded-lg`}
 >
-    <slot />
-</section>
+  <slot />
+</Tag>

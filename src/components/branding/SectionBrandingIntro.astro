@@ -3,31 +3,41 @@ import SectionBranding from "@components/ui/SectionBranding.astro";
 ---
 
 <SectionBranding 
-  class="relative flex flex-col items-center text-center md:text-left justify-center py-20 px-6 md:px-12 lg:px-20 bg-white dark:bg-gray-900"
+  id="intro"
+  class="relative flex flex-col items-center  md:text-left justify-center py-20 px-6 md:px-12 lg:px-20 bg-white dark:bg-gray-900"
   aria-labelledby="intro-title"
 >
   <!-- Título de sección -->
   <h2 
     id="intro-title"
-    class="text-[clamp(2rem,5vw,3rem)] font-extrabold tracking-tight text-red-600 dark:text-red-500 mb-8"
+    class="text-[clamp(1.75rem,4vw,2.75rem)] font-extrabold tracking-tight text-brand-red mb-8"
+    data-aos="fade-up"
   >
     Introducción
   </h2>
 
   <!-- Párrafos descriptivos -->
   <div class="space-y-6 max-w-3xl mx-auto">
-    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-      Este <span class="font-semibold text-red-600 dark:text-red-500">
+    <p 
+      class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-loose"
+      data-aos="fade-up" 
+      data-aos-delay="100"
+    >
+      Este <span class="font-semibold text-brand-red">
         Manual de Identidad de Marca
       </span> establece las directrices clave para proteger y proyectar la esencia visual
-      y conceptual de <span class="font-semibold text-red-600 dark:text-red-500">
+      y conceptual de <span class="font-semibold text-brand-red">
         Diego Suárez
       </span>, desarrollador de software. Contiene la guía precisa para el uso
       correcto del logotipo, la paleta cromática, la tipografía y las
       aplicaciones adecuadas e inadecuadas del imagotipo.
     </p>
 
-    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+    <p 
+      class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-loose"
+      data-aos="fade-up" 
+      data-aos-delay="200"
+    >
       Su propósito es asegurar una comunicación visual consistente y
       profesional, transmitiendo de forma clara los valores de confianza,
       innovación y autenticidad que definen la marca, garantizando así un
