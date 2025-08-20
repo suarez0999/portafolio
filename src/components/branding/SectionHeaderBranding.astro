@@ -3,29 +3,28 @@ import SectionBranding from "@components/ui/SectionBranding.astro";
 import ArrowScroll from "@components/icons/ArrowScroll.astro";
 ---
 
-<!-- Sección Encabezado -->
 <SectionBranding
   id="header"
   class="relative flex items-center justify-center min-h-screen px-6 md:px-12 lg:px-20 bg-white dark:bg-gray-900"
 >
-  <header class="flex flex-col items-center text-center w-full max-w-4xl">
-    <!-- Logo -->
+  <header class="flex flex-col items-center text-center w-full max-w-4xl space-y-6">
+    <!-- Logo SVG responsive -->
     <img
       src="/Recurso21.svg"
       alt="Logotipo oficial de la marca Diego Suarez"
-      class="w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 mb-8 transition-transform duration-300 hover:scale-105"
+      class="w-[clamp(8rem,20vw,18rem)] h-auto transition-transform duration-300 hover:scale-105"
     />
 
     <!-- Título principal -->
     <h1
-      class="text-[clamp(1.75rem,5vw,3rem)] font-extrabold tracking-tight text-gray-900 dark:text-white mb-6"
+      class="font-heading text-[clamp(1.75rem,5vw,3rem)] font-extrabold tracking-tight text-gray-900 dark:text-white"
     >
       Manual de Identidad de la Marca
     </h1>
 
     <!-- Subtítulo / texto descriptivo -->
     <p
-      class="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+      class="font-sans text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl"
     >
       Guía oficial para mantener la coherencia visual y conceptual de la marca
       en todos los medios.

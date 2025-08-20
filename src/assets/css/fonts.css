@@ -1,0 +1,35 @@
+/* Poppins */
+@font-face {
+  font-family: "PoppinsFont";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Open Sans */
+@font-face {
+  font-family: "OpenSansFont";
+  src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Marykate */
+@font-face {
+  font-family: "MarykateFont";
+  src: url("/fonts/Marykate-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat */
+@font-face {
+  font-family: "MonserratFont";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

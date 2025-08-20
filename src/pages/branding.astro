@@ -1,8 +1,7 @@
 ---
 import SectionBrandingIntro from "@branding/SectionBrandingIntro.astro";
 import SectionHeaderBranding from "@branding/SectionHeaderBranding.astro";
-import TitleOne from "@branding/TitleOne.astro";
-import TitleTwo from "@branding/TitleTwo.astro";
+import SectionBrandingNumber from "@ui/SectionBrandingNumber.astro";
 import Layout from "@layouts/Layout.astro";
 import WhoWeAre from "@branding/WhoWeAre.astro";
 import MissionVision from "@branding/MissionVision.astro";
@@ -12,24 +11,26 @@ import Imagotipo from "@branding/Imagotipo.astro";
 ---
 
 <Layout>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&family=Inter:wght@400;500;700&display=swap");
-
-    :root {
-      --font-heading: "Kapakana", sans-serif;
-      --font-body: "Inter", sans-serif;
-    }
-  </style>
-
   <section class="max-w-7xl mx-auto px-6 py-20 space-y-24">
     <SectionHeaderBranding />
     <SectionBrandingIntro />
-    <TitleOne />
+    <SectionBrandingNumber
+      number="01"
+      title="Marca"
+      color="text-brand-red"
+      delay={200}
+    />
     <WhoWeAre />
     <MissionVision />
     <DNA />
     <Public />
-    <TitleTwo />
+    <SectionBrandingNumber
+      number="02"
+      title="Imagotipo"
+      color="text-brand-red"
+      delay={300}
+    />
+
     <Imagotipo />
 
     <section>

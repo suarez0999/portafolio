@@ -8,6 +8,7 @@ export default {
         sans: ["OpenSansFont", "sans-serif", "system-ui"], // Texto base
         heading: ["PoppinsFont", "sans-serif", "system-ui"], // Títulos
         accent: ["MarykateFont", "sans-serif", "system-ui"], // Decorativa
+        mono: ["MonserratFont", "sans-serif", "system-ui"], // opcional
       },
 
       colors: {
